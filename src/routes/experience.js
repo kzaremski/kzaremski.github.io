@@ -48,10 +48,10 @@ export default class Experience extends React.Component {
   render() {
     return (
       <div>
-        <h1>Experience</h1>
+        <h1 className='px-4'>Experience</h1>
         {
           this.experience.map((entry) =>
-            <div className='card bg-primary shadow-soft border-light mb-4'>
+            <div className='card bg-primary shadow-soft border-light mb-4' key={ entry.title + entry.company }>
               <div className='card-body'>
                 <h4>{ entry.title }</h4>
                 <p className='card-text'>
@@ -60,7 +60,7 @@ export default class Experience extends React.Component {
                 <ul className='mb-0'>
                   {
                     entry.description.map((line) =>
-                      <li>{ line }</li>
+                      <li key={ entry.title + entry.company + line}>{ line }</li>
                     )
                   }
                 </ul>

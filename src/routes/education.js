@@ -4,7 +4,7 @@ export default class Education extends React.Component {
   render() {
     return (
       <div>
-        <h1>Education</h1>
+        <h1 className='px-4'>Education</h1>
         <div className='card bg-primary shadow-soft border-light mb-4'>
           <div className='card-body'>
             <h4>A.S. in Computer Science</h4>
