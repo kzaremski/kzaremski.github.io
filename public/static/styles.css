@@ -1,0 +1,11 @@
+#groshi-old {
+  background-image: url('/static/groshi/oldbg.png');
+  background-position-y: 50%;
+  background-size: cover;
+}
+
+#groshi-new {
+  background-image: url('/static/groshi/newbg.png');
+  background-position-y: 50%;
+  background-size: cover;
+}

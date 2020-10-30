@@ -4,6 +4,7 @@ import Contact from './routes/contact';
 import Education from './routes/education';
 import Experience from './routes/experience';
 import Home from './routes/home';
+import PersonalProject from './routes/personalproject';
 import Skills from './routes/skills';
 
 export default class MainRouter extends React.Component {
@@ -15,7 +16,7 @@ export default class MainRouter extends React.Component {
             <div className='col-md-5 col-lg-4'>
               <div className='card bg-primary shadow-soft border-light mt-6'>
                 <div className='profile-image bg-primary shadow-inset border border-light rounded p-3 ml-3 mt-n5'>
-                  <img src='/static/pfp.jpg' className='card-img-top rounded' alt='Konstantin Profile Picture'/>
+                  <img src='/static/pfp.jpg' className='card-img-top rounded' alt='Konstantin'/>
                 </div>
                 <div className='card-body'>
                   <h3 className='h5 mb-1 font-weight-bold'>Konstantin Zaremski</h3>
@@ -36,10 +37,14 @@ export default class MainRouter extends React.Component {
               <Route path='/' exact component={ Home }/>
               <Route path='/education' component={ Education }/>
               <Route path='/skills' component={ Skills }/>
-              <Route path='/contact' component={ Contact }/>
+              <Route path='/personalproject' component={ PersonalProject }/>
               <Route path='/experience' component={ Experience }/>
+              <Route path='/contact' component={ Contact }/>
             </div>
           </div>
+        </div>
+        <div className='container'>
+          <p className='text-center'>Copyright &copy; 2020 Konstantin Zaremski &mdash; All rights reserved.</p>
         </div>
       </Router>
     );

@@ -11,9 +11,9 @@ export default class Contact extends React.Component {
           </div>
         </div>
         <div className='row'>
-          <div className='col-md-4 mb-4'><a href='https://www.linkedin.com/in/konstantinzaremski' className='btn btn-primary animate-down-2 d-block text-secondary'><i className='fab fa-linkedin mr-2'></i>LinkedIn</a></div>
-          <div className='col-md-4 mb-4'><a href='https://www.github.com/kzaremski' className='btn btn-primary animate-down-2 d-block text-warning'><i className='fab fa-github mr-2'></i>GitHub</a></div>
-          <div className='col-md-4 mb-4'><a href='http://m.me/konstantin.zaremski' className='btn btn-primary animate-down-2 d-block text-danger'><i className='fab fa-facebook-messenger mr-2'></i>Messenger</a></div>
+          <div className='col-md-4 mb-4'><a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/konstantinzaremski' className='btn btn-primary animate-down-2 d-block text-secondary'><i className='fab fa-linkedin mr-2'></i>LinkedIn</a></div>
+          <div className='col-md-4 mb-4'><a target='_blank' rel='noopener noreferrer' href='https://www.github.com/kzaremski' className='btn btn-primary animate-down-2 d-block text-warning'><i className='fab fa-github mr-2'></i>GitHub</a></div>
+          <div className='col-md-4 mb-4'><a target='_blank' rel='noopener noreferrer' href='http://m.me/konstantin.zaremski' className='btn btn-primary animate-down-2 d-block text-danger'><i className='fab fa-facebook-messenger mr-2'></i>Messenger</a></div>
         </div>
       </div>
     );
