@@ -5,7 +5,7 @@ export default class Education extends React.Component {
     return (
       <div>
         <h1>Education</h1>
-        <div className='card bg-primary shadow-soft border-light'>
+        <div className='card bg-primary shadow-soft border-light mb-4'>
           <div className='card-body'>
             <h4>A.S. in Computer Science</h4>
             <p className='card-text'>
@@ -14,7 +14,7 @@ export default class Education extends React.Component {
             </p>
           </div>
         </div>
-        <div className='card bg-primary shadow-soft border-light mt-4'>
+        <div className='card bg-primary shadow-soft border-light mb-4'>
           <div className='card-body'>
             <p className='card-text'>
               <i className='fas fa-school mr-2'></i>ThunderRidge High School<i className='fas fa-calendar mr-2 ml-3'></i>2014 - 2016<br/>
