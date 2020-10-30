@@ -1,5 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Route, NavLink } from 'react-router-dom';
+import Education from './routes/education';
 import Home from './routes/home';
 
 export default class MainRouter extends React.Component {
@@ -29,7 +30,8 @@ export default class MainRouter extends React.Component {
               </div>
             </div>
             <div className='col-md-7 col-lg-8 pt-5'>
-              <Route path='/' exact component={Home} />
+              <Route path='/' exact component={ Home }/>
+              <Route path='/education' component={ Education }/>
             </div>
           </div>
         </div>
