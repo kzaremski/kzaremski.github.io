@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Route, NavLink } from 'react-router-dom';
 import Education from './routes/education';
 import Home from './routes/home';
+import Skills from './routes/skills';
 
 export default class MainRouter extends React.Component {
   render() {
@@ -32,6 +33,7 @@ export default class MainRouter extends React.Component {
             <div className='col-md-7 col-lg-8 pt-5'>
               <Route path='/' exact component={ Home }/>
               <Route path='/education' component={ Education }/>
+              <Route path='/skills' component={ Skills }/>
             </div>
           </div>
         </div>
