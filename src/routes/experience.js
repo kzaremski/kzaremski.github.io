@@ -55,15 +55,15 @@ export default class Experience extends React.Component {
               <div className='card-body'>
                 <h4>{ entry.title }</h4>
                 <p className='card-text'>
-        <i className='fas fa-building mr-2'></i>{ entry.company }<i className='fas fa-map-marker mr-2 ml-3'></i>{ entry.location }<i className='fas fa-calendar mr-2 ml-3'></i>{ entry.start }{ entry.end ? ' . ' : ''}{ entry.end }
-                  <ul className='mb-0'>
-                    {
-                      entry.description.map((line) =>
-                        <li>{ line }</li>
-                      )
-                    }
-                  </ul>
+                  <i className='fas fa-building mr-2'></i>{ entry.company }<i className='fas fa-map-marker mr-2 ml-3'></i>{ entry.location }<i className='fas fa-calendar mr-2 ml-3'></i>{ entry.start }{ entry.end ? ' . ' : ''}{ entry.end }
                 </p>
+                <ul className='mb-0'>
+                  {
+                    entry.description.map((line) =>
+                      <li>{ line }</li>
+                    )
+                  }
+                </ul>
               </div>
             </div>
           )
