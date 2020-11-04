@@ -1,14 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default class PersonalProject extends React.Component {
+export const Project_Groshi_Manifest = {
+  title: 'Groshi Financial Platform',
+  date: '2019 - 2020',
+  description: 'To grow and exercise my full stack knowledge I have been building a web based stock charting and financial analysis platform sporting advanced features typically only found on heavy clients.',
+  tags: ['Web Development', 'Full Stack', 'Finance', 'Personal'],
+  banner: '/static/img/groshi.png',
+  path: '/projects/groshi'
+};
+
+export class Project_Groshi extends React.Component {
   render() {
     return (
       <div>
-        <h1 className='px-4'>Personal Project</h1>
+        <h1 className='px-4'><span className='h4 text-secondary'><Link to='/projects'><i className='fas fa-folder-open mr-2'></i>Projects/ </Link></span>Groshi Financial Platform</h1>
         <div className='card bg-primary shadow-soft border-light mb-4'>
           <div className='card-body'>
             <p className='card-text'>
-              To grow and exercise my full stack knowledge I have been building a web based stock charting and financial analysis platform sporting advanced features typically only found on heavy clients.
+              To grow and exercise my full stack knowledge I have been building a web based stock charting and financial analysis platform sporting advanced features typically only found on heavy clients. This is my main personal project
               <br/><br/>I have named the platform Groshi, a Ukranian word for money.
             </p>
           </div>
