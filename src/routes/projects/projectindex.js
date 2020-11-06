@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import { Project_Groshi_Manifest, Project_Groshi} from './groshi';
+import { Project_Jolie, Project_Jolie_Manifest } from './jolie';
 
 class Project extends React.Component {
   project = this.props.project;
@@ -32,7 +33,8 @@ export default class ProjectIndex extends React.Component {
     super();
 
     this.projects = [
-      Project_Groshi_Manifest
+      Project_Groshi_Manifest,
+      Project_Jolie_Manifest
     ];
   }
 
@@ -52,6 +54,7 @@ export default class ProjectIndex extends React.Component {
           </div>
         </Route>
         <Route path='/projects/groshi' component={ Project_Groshi }/>
+        <Route path='/projects/jolieandco' component={ Project_Jolie }/>
       </>
     );
   }
