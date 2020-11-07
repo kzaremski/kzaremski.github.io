@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
+import { Project_CAP, Project_CAP_Manifest } from './cap';
 import { Project_Groshi_Manifest, Project_Groshi} from './groshi';
 import { Project_Jolie, Project_Jolie_Manifest } from './jolie';
 
@@ -53,8 +54,9 @@ export default class ProjectIndex extends React.Component {
             </div>
           </div>
         </Route>
-        <Route path='/projects/groshi' component={ Project_Groshi }/>
-        <Route path='/projects/jolieandco' component={ Project_Jolie }/>
+        <Route path={ Project_Groshi_Manifest.path } component={ Project_Groshi }/>
+        <Route path={ Project_Jolie_Manifest.path } component={ Project_Jolie }/>
+        <Route path={ Project_CAP_Manifest.path } component={ Project_CAP }/>
       </>
     );
   }
