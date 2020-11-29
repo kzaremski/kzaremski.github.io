@@ -7,7 +7,7 @@ export default class Contact extends React.Component {
         <h1 className='px-4'>Contact</h1>
         <div className='card bg-primary shadow-soft border-light mb-4'>
           <div className='card-body'>
-            <p className='card-text'>While I'm not going to put my email or phone number in plain, if you feel that I would be a good fit for a position or project of yours don't hesitate to reach out to me through LinkedIn or Facebook Messenger.</p>
+            <p className='card-text'>While I'm not going to put my email or phone number in plain view, if you feel that I would be a good fit for a position or project of yours don't hesitate to reach out to me through LinkedIn or Facebook Messenger.</p>
           </div>
         </div>
         <div className='row'>
