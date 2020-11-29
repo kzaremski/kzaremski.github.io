@@ -23,7 +23,7 @@ export default class Skills extends React.Component {
             <div className='card-text mt-3'>
               {
                 this.skills.tools.map((tool) =>
-                  <div key={ tool } className='rounded border-light px-3 py-1 mb-2 bg-primary shadow-inset mr-2 d-inline-block text-info'>{ tool }</div>
+                  <div key={ tool } className='rounded border-light px-3 py-1 mb-2 bg-primary shadow-inset mr-2 d-inline-block text-info font-weight-bold'>{ tool }</div>
                 )
               }
             </div>
@@ -35,7 +35,7 @@ export default class Skills extends React.Component {
             <div className='card-text mt-3'>
               {
                 this.skills.technologies.map((technology) =>
-                  <div key={ technology } className='rounded border-light px-3 py-1 mb-2 bg-primary shadow-inset mr-2 d-inline-block text-warning'>{ technology }</div>
+                  <div key={ technology } className='rounded border-light px-3 py-1 mb-2 bg-primary shadow-inset mr-2 d-inline-block text-success font-weight-bold'>{ technology }</div>
                 )
               }
             </div>
@@ -47,7 +47,7 @@ export default class Skills extends React.Component {
             <div className='card-text mt-3'>
               {
                 this.skills.languages.map((language) =>
-                  <div key={ language } className='rounded border-light px-3 py-1 mb-2 bg-primary shadow-inset mr-2 d-inline-block text-secondary'>{ language }</div>
+                  <div key={ language } className='rounded border-light px-3 py-1 mb-2 bg-primary shadow-inset mr-2 d-inline-block text-secondary font-weight-bold'>{ language }</div>
                 )
               }
             </div>
@@ -59,7 +59,7 @@ export default class Skills extends React.Component {
             <div className='card-text mt-3'>
               {
                 this.skills.databases.map((database) =>
-                  <div key={ database } className='rounded border-light px-3 py-1 mb-2 bg-primary shadow-inset mr-2 d-inline-block'>{ database }</div>
+                  <div key={ database } className='rounded border-light px-3 py-1 mb-2 bg-primary shadow-inset mr-2 d-inline-block font-weight-bold'>{ database }</div>
                 )
               }
             </div>
@@ -71,7 +71,7 @@ export default class Skills extends React.Component {
             <div className='card-text mt-3'>
               {
                 this.skills.expertise.map((expertise) =>
-                  <div key={ expertise } className='rounded border-light px-3 py-1 mb-2 bg-primary shadow-inset mr-2 d-inline-block text-danger'>{ expertise }</div>
+                  <div key={ expertise } className='rounded border-light px-3 py-1 mb-2 bg-primary shadow-inset mr-2 d-inline-block text-danger font-weight-bold'>{ expertise }</div>
                 )
               }
             </div>
