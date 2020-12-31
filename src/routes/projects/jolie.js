@@ -54,7 +54,7 @@ export class Project_Jolie extends React.Component {
         <div className='card bg-primary shadow-soft border-light mb-4'>
           <div className='card-body'>
             <p className='card-text'>
-              <strong>UPDATE:</strong> As of July 10, 2022 the cover page with the animated logo is no longer in use by the company. 
+              <strong>UPDATE:</strong> As of July 10, 2020 the cover page with the animated logo is no longer in use by the company. 
             </p>
           </div>
         </div>
