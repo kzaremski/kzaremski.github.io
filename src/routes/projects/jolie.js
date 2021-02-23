@@ -31,7 +31,7 @@ export class Project_Jolie extends React.Component {
               <li>Any color from the stroke was a mask that would make the underlining logo calligraphy visible.</li>
               <li>Once finished, the composition was exported as a GIF that would not loop.</li>
             </ul>
-            <img src='/static/img/jolieae.png' className='img-responsive rounded shadow-light'/>
+            <img src='/static/img/jolieae.png' alt='' className='img-responsive rounded shadow-light'/>
             <small>Pictured: The draw on effect consisting of multiple paths with their strokes and offsets animated within the Adobe After Effects workspace.</small>
           </div>
         </div>
@@ -47,7 +47,7 @@ export class Project_Jolie extends React.Component {
           <div className='card-body'>
             <h4>Demo</h4>
             <div className='embed-responsive embed-responsive-16by9'>
-              <iframe src={'/static/jolie/cover.html?a=' + Math.random()} className='rounded embed-responsive-item'></iframe>
+              <iframe title='Jolie Cover Page' src={'/static/jolie/cover.html?a=' + Math.random()} className='rounded embed-responsive-item'></iframe>
             </div>
           </div>
         </div>

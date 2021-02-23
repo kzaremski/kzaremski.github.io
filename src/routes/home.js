@@ -17,7 +17,7 @@ export default class Home extends React.Component {
         </div>
         <div className='card bg-primary shadow-soft border-light mb-4'>
           <div className='card-body'>
-            <p className='card-text'>Let's connect and bring your sketches, concepts, and goals to fruition.</p>
+            <p className='card-text'>Let's connect and bring your specs, concepts, and goals to fruition.</p>
           </div>
         </div>
       </div>
