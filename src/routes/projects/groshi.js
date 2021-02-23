@@ -27,12 +27,12 @@ export class Project_Groshi extends React.Component {
           <div className='card-body'>
             <h4>Technical Summary</h4>
             <ul>
-              <li>The general website front end consists of a single page app using React Router.</li>
+              <li>The general website front end consists of pages rendered by the nunjucks templaing engine, with routing handled by ExpressJS.</li>
               <li>The app itself has a dynamic tiling interface consisting of charting, company info, news, and other info applets arranged by React Mosaic.</li>
               <li>Groshi runs on a Node.js back end using the Express.js web app framework, hosted on Microsoft Azure.</li>
               <li>User accounts, newsletter subscribers, beta keys, and other data is stored using MongoDB.</li>
               <li>Newsletter and account email verification and notifications are handled by Mailgun and their Node.js SDK.</li>
-              <li>Data is pulled from the marked data provider (IEX Cloud) using their REST API, cached on Groshi’s system in a Redis cache, then redistributed to clients using WebSockets as to not cause API overage charges.</li>
+              <li>Data is pulled from the marked data provider (IEX Cloud) using their REST API, cached on Groshi’s system in a Redis cache, then redistributed to clients using my own little WebSockets wrapper as to not cause API overage charges.</li>
             </ul>
           </div>
         </div>
@@ -45,7 +45,7 @@ export class Project_Groshi extends React.Component {
         <div className='card shadow-soft border-light mb-4 text-white' id='groshi-old'>
           <div className='card-body d-flex flex-row align-items-center'>
             <h5 className='my-0 d-inline-block'>Old Version (JQuery)</h5>
-            <a target='_blank' rel='noopener noreferrer' href='http://groshi.herokuapp.com' className='rounded bg-warning px-3 py-2 ml-auto d-inline-block'>Check It Out &#187;</a>
+            <p className='rounded bg-dark px-3 py-2 my-0 ml-auto d-inline-block'>Offline</p>
           </div>
         </div>
         <div className='card bg-primary shadow-soft border-light mb-4'>
