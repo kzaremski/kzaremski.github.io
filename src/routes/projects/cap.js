@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Project_CAP_Manifest = {
   title: 'Colorado Auto & Parts',
-  date: 'Nov 2020',
+  date: 'Mar 2021',
   description: 'I redesigned and modernized the Wordpress website of a renowned local Englewood based automotive salvage yard.',
   tags: ['Web Development', 'Web Design', 'Wordpress', 'Bootstrap'],
   banner: '/static/img/cap.png',

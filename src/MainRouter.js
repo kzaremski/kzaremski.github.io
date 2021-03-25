@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import Contact from './routes/contact';
-import Education from './routes/education';
+//import Education from './routes/education';
 import Experience from './routes/experience';
 import Home from './routes/home';
 import ProjectIndex from './routes/projects/projectindex';

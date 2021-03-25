@@ -6,6 +6,20 @@ export default class Experience extends React.Component {
     
     this.experience = [
       {
+        title: 'Full Stack Web Developer',
+        company: 'David Clifton Ministries',
+        location: 'Lakewood, CO',
+        start: 'Jan 2021',
+        end: 'Apr 2021',
+        description: [
+          'Utilized a stack consisting of MongoDB, Express.js, React, and Node.js to develop an internal web application that would be used to manage food bank recipients, their visits, incoming shipments from vendors, and then generate the reports that would be required for tax purposes, government grants, and compliance with county and state regulations.',
+          'Migrated data from the existing solution built on top of Microsoft Access to the new MongoDB database.',
+          'Established the production environment on a Debian server running on donated hardware located on premises.',
+          'Ensured the durability of the new production data by automating a cloud backup routine for the database.',
+          'Documented the application interface and technical design for end users and future developers to reference.'
+        ]
+      },
+      {
         title: 'Retail Sales Associate, Computing Department',
         company: 'Best Buy',
         location: 'Lone Tree, CO',
@@ -17,7 +31,7 @@ export default class Experience extends React.Component {
           'Maintained the cleanliness of display computers, floors, shelves, counters, and hidden storage in the department.'
         ]
       },
-      {
+      /*{
         title: 'Web Designer & Developer',
         company: 'All Source Construction',
         location: 'Englewood, CO',
@@ -29,9 +43,9 @@ export default class Experience extends React.Component {
           'Integrated payments and created a basic order management system to track web orders.',
           'Attended occasional meetings with the owners where progress updates were given, and plans were drafted.',
         ]
-      },
+      },*/
       {
-        title: '(Freelance Project) Front End Web Designer',
+        title: <>Front End Web Designer<span className='ml-2 small bg-dark text-white p-1 rounded-lg'>Project</span></>,
         company: 'Jolie Stationary',
         location: 'Denver, CO',
         start: 'Oct 2017',
