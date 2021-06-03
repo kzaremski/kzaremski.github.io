@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export class Project_Jolie extends React.Component {
+export class Project_RockSat2020 extends React.Component {
   manifest = {
-    title: 'Jolie & Co. Animated Logo Cover Page',
-    date: 'Sep 2017',
-    description: 'I was contracted to animate the logo of a Denver based wedding stationery company and integrate it into their website cover page on Squarespace.',
-    tags: ['Animation', 'Graphic Design', 'Web Design', 'Adobe After Effects'],
-    banner: '/static/img/jolie.png',
-    path: '/projects/jolieandco'
+    title: 'RockSat 2020',
+    date: 'May 2021',
+    description: 'The joint Arapahoe Community College and Red Rocks Community College RockSat 2020 team brought me on in early May to help with the final software integration for their RockSat 2020 mission payload.',
+    tags: ['Web Development', 'Internal Application', 'MongoDB', 'Full Stack', 'Web Design'],
+    banner: '/static/img/rocksat.jpg',
+    path: '/projects/rocksat'
   }
 
   getManifest() { return this.manifest }
