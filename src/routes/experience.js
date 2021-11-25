@@ -24,7 +24,7 @@ export default class Experience extends React.Component {
         company: 'Best Buy',
         location: 'Lone Tree, CO',
         start: 'Nov 2019',
-        end: 'Present',
+        end: 'Jun 2021',
         description: [
           'Provided a comfortable and insightful shopping experience to department patrons.',
           'Connected customers to complete solutions including additional software and accessories based on their needs.',
