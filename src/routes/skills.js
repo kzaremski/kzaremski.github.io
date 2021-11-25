@@ -5,11 +5,11 @@ export default class Skills extends React.Component {
     super();
     
     this.skills = {
-      tools: ['Git', 'Adobe Photoshop', 'Adobe Illustrator', 'Adobe Premiere Pro', 'Adobe After Effects', 'Unix & Linux Environments', 'Microsoft Azure'],
-      technologies: ['Node.js', 'Express.js', 'React', 'JQuery', 'AJAX', 'Bootstrap 4', 'HTML5 Canvas', 'Babel', 'Webpack', 'Nunjucks', 'WebSockets'],
-      languages: ['JavaScript', 'HTML5', 'CSS3', 'SCSS', 'Python 3'/*, 'PHP'*/],
-      databases: ['MongoDB', 'MySQL', 'PostgreSQL'],
-      expertise: ['Full Stack Web Development', 'Responsive Web Design', 'Data Visualization']
+      tools: ['Git', 'GitHub', 'Adobe Creative Cloud', 'Linux Environments', 'Microsoft Azure'],
+      technologies: ['Node.js', 'Express.js', 'React', 'JQuery', 'AJAX', 'Bootstrap 5', 'HTML5 Canvas', 'Babel', 'Webpack', 'Nunjucks', 'Wordpress', 'WebSockets'],
+      languages: ['JavaScript', 'HTML5', 'CSS3', 'SCSS', 'Python 3', 'SQL'/*, 'PHP'*/],
+      databases: ['MongoDB', 'PostgreSQL'],
+      expertise: ['Frontend Web Devlopment', 'Full Stack Web Development', 'Responsive Web Design', 'Data Visualization', 'Retail Sales']
     }
   }
 

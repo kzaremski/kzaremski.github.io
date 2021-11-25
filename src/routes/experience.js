@@ -6,29 +6,41 @@ export default class Experience extends React.Component {
     
     this.experience = [
       {
+        title: 'Consultation Agent',
+        company: 'Geek Squad',
+        location: 'Lone Tree, CO',
+        start: 'Jun 2021',
+        end: 'Dec 2021',
+        description: [
+          'Provided computer support and education to clients.',
+          'Documented issues and reccomendations in detail for advanced repair specialists to take over.',
+          'Tested and reconditioned returned products.',
+          'Delivered outstanding experiences to build long term client relationships and continued patronage'
+        ]
+      },
+      {
         title: 'Full Stack Web Developer',
         company: 'David Clifton Ministries',
         location: 'Lakewood, CO',
         start: 'Jan 2021',
-        end: 'Apr 2021',
+        end: 'May 2021',
         description: [
-          'Utilized a stack consisting of MongoDB, Express.js, React, and Node.js to develop an internal web application that would be used to manage food bank recipients, their visits, incoming shipments from vendors, and then generate the reports that would be required for tax purposes, government grants, and compliance with county and state regulations.',
-          'Migrated data from the existing solution built on top of Microsoft Access to the new MongoDB database.',
-          'Established the production environment on a Debian server running on donated hardware located on premises.',
-          'Ensured the durability of the new production data by automating a cloud backup routine for the database.',
-          'Documented the application interface and technical design for end users and future developers to reference.'
+          'Implemented internal food pantry management application using React, Express, and MongoDB',
+          'Migrated data from existing MS Access database.',
+          'Communicated progress of project with management and met moving project requirements.',
+          'Trained ministry volunteers on operation of the software.',
+          'Furnished general IT support and improvements with the ministry’s network and computers.'
         ]
       },
       {
-        title: 'Retail Sales Associate, Computing Department',
+        title: 'Retail Sales Advisor',
         company: 'Best Buy',
         location: 'Lone Tree, CO',
         start: 'Nov 2019',
         end: 'Jun 2021',
         description: [
-          'Provided a comfortable and insightful shopping experience to department patrons.',
-          'Connected customers to complete solutions including additional software and accessories based on their needs.',
-          'Maintained the cleanliness of display computers, floors, shelves, counters, and hidden storage in the department.'
+          'Connected customers to comprehensive solutions encompassing the spectrum of products, software, and services that Best Buy has to offer.',
+          ' Maintained positive vendor relationships by delivering unbiased sales recommendations.'
         ]
       },
       /*{
