@@ -44,7 +44,7 @@ export default class MainRouter extends React.Component {
           </div>
         </div>
         <div className='container mt-3'>
-          <p className='text-center'>Copyright &copy; 2020 Konstantin Zaremski &mdash; All rights reserved.</p>
+          <p className='text-center'>Copyright &copy; 2021 Konstantin Zaremski &mdash; All rights reserved.</p>
         </div>
       </Router>
     );
