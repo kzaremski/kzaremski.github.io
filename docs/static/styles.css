@@ -9,3 +9,9 @@
   background-position-y: 50%;
   background-size: cover;
 }
+
+#stickysidebar {
+  position: -webkit-sticky;
+	position: sticky;
+	top: 80px;
+}

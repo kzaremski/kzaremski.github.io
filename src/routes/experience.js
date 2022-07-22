@@ -6,30 +6,44 @@ export default class Experience extends React.Component {
     
     this.experience = [
       {
+        title: 'Frontend Developer',
+        company: 'NCH Software',
+        location: 'Greenwood Village, CO',
+        start: 'Dec 2021',
+        end: 'Mar 2022',
+        description: [
+          'Performed frontend feature updates, maintenance, and bug fixes for the Brisk Cloudware family of business web applications, JavaScript',
+          'Implemented in-house branded subscription management UI supplanting the default Stripe views',
+          'Manifested outstanding user experiences through style and functional overhauls',
+          'Collaborated with other developers and management in every step of the development lifecycle',
+          'Capitalized on prior experience to perform Linux and Windows server administration tasks'
+        ]
+      },
+      {
         title: 'Consultation Agent',
         company: 'Geek Squad',
         location: 'Lone Tree, CO',
         start: 'Jun 2021',
         end: 'Dec 2021',
         description: [
-          'Provided computer support and education to clients.',
-          'Documented issues and reccomendations in detail for advanced repair specialists to take over.',
-          'Tested and reconditioned returned products.',
-          'Delivered outstanding experiences to build long term client relationships and continued patronage'
+          'Provided computer support and education to clients',
+          'Documented issues and recommendations in detail for advanced repair specialists to take over',
+          'Tested and reconditioned returned products',
+          'Delivered outstanding experiences to build long term client relationships and enduring patronage'
         ]
       },
       {
-        title: 'Full Stack Web Developer',
+        title: <>Full Stack Web Developer <span className='ml-2 bg-dark text-white p-1 rounded-lg' style={{'font-size': '0.5em'}}>Single Project Basis</span></>,
         company: 'David Clifton Ministries',
         location: 'Lakewood, CO',
         start: 'Jan 2021',
         end: 'May 2021',
         description: [
           'Implemented internal food pantry management application using React, Express, and MongoDB',
-          'Migrated data from existing MS Access database.',
-          'Communicated progress of project with management and met moving project requirements.',
-          'Trained ministry volunteers on operation of the software.',
-          'Furnished general IT support and improvements with the ministry’s network and computers.'
+          'Migrated data from existing MS Access database',
+          'Communicated progress of project with management and met moving project requirements',
+          'Trained ministry volunteers on operation of the software',
+          'Furnished general IT support and improvements with the ministry\'s network and computers'
         ]
       },
       {
@@ -39,8 +53,8 @@ export default class Experience extends React.Component {
         start: 'Nov 2019',
         end: 'Jun 2021',
         description: [
-          'Connected customers to comprehensive solutions encompassing the spectrum of products, software, and services that Best Buy has to offer.',
-          ' Maintained positive vendor relationships by delivering unbiased sales recommendations.'
+          'Connected customers to comprehensive solutions encompassing the spectrum of products, software, and services that Best Buy has to offer',
+          'Maintained positive vendor relationships by delivering unbiased sales recommendations'
         ]
       },
       /*{
@@ -57,15 +71,15 @@ export default class Experience extends React.Component {
         ]
       },*/
       {
-        title: <>Front End Web Designer<span className='ml-2 small bg-dark text-white p-1 rounded-lg'>Project</span></>,
+        title: <>Web Designer <span className='ml-2 bg-dark text-white p-1 rounded-lg' style={{'font-size': '0.5em'}}>Single Project Basis</span></>,
         company: 'Jolie Stationary',
         location: 'Denver, CO',
         start: 'Oct 2017',
         description: [
-          'Created cover page for the client’s site www.jolieandco.com.',
+          'Created cover page for the client\'s site www.jolieandco.com.',
           'Animated logo calligraphy with Adobe After Effects from Adobe Illustrator source files.',
           'Optimized final animation to run smoothly on smartphones and tablets.',
-          'Integrated cover page with pre-existing Squarespace site and used various workarounds to go beyond Squarespace’s styling restrictions.'
+          'Integrated cover page with pre-existing Squarespace site and used various workarounds to go beyond Squarespace\'s styling restrictions.'
         ]
       },
     ];

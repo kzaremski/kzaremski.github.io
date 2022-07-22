@@ -5,11 +5,11 @@ export default class Skills extends React.Component {
     super();
     
     this.skills = {
-      tools: ['Git', 'GitHub', 'Adobe Creative Cloud', 'Linux Environments', 'Microsoft Azure'],
-      technologies: ['Node.js', 'Express.js', 'React', 'JQuery', 'AJAX', 'Bootstrap 5', 'HTML5 Canvas', 'Babel', 'Webpack', 'Nunjucks', 'Wordpress', 'WebSockets'],
-      languages: ['JavaScript', 'HTML5', 'CSS3', 'SCSS', 'Python 3', 'SQL'/*, 'PHP'*/],
-      databases: ['MongoDB', 'PostgreSQL'],
-      expertise: ['Frontend Web Devlopment', 'Full Stack Web Development', 'Responsive Web Design', 'Data Visualization', 'Retail Sales']
+      tools: ['Git', 'Subversion', 'UNIX/Linux Environments (Debian, Ubuntu, RHEL & CentOS)', 'GitHub', 'Adobe Creative Cloud', 'Shopify', 'Microsoft Office', 'Shell Scripting', 'Visual Studio', 'Windows Server', 'Microsoft Azure'],
+      technologies: ['Node.js', 'Express.js', 'React', 'JQuery', 'AJAX', 'REST', 'JSON', 'Bootstrap', 'HTML5 Canvas', 'Babel', 'Webpack', 'Nunjucks', 'WordPress', 'WebSockets', 'Stripe Payments (API & webhooks)'],
+      languages: ['JavaScript', 'HTML5', 'CSS/SCSS', 'Python', 'SQL'],
+      databases: ['MongoDB', 'PostgreSQL', 'MySQL', 'SQLite'],
+      expertise: ['Full Stack Web Development', 'Responsive Web Design', 'Data Visualization', 'Retail Sales', 'Frontend Web Development', 'Web Applications']
     }
   }
 

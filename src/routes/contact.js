@@ -12,7 +12,7 @@ export default class Contact extends React.Component {
         </div>
         <div className='card bg-primary shadow-soft border-light mb-4'>
           <div className='card-body'>
-            <p className='card-text'>Email: <strong>konstantin.zaremski@gmail.com</strong></p>
+            <p className='card-text'>Email: <strong><a href='mailto:konstantin.zaremski@gmail.com'>konstantin.zaremski@gmail.com</a></strong></p>
           </div>
         </div>
         <div className='row'>

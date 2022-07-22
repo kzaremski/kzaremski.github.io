@@ -59,6 +59,11 @@ export class Project_DCM extends React.Component {
               The UPC input can be selected and a USB barcode scanner can be used to scan in products individually.
               Product definitions can be redefined on the fly and a database of products is dynamically built as they are defined because using a third party UPC API is cost prohibitive.
             </p>
+            <p>
+              Additional screenshots are available upon request.
+              I can only share small snippets of the code.
+              This is a real application that I built for an organization and is running in a production environment.
+            </p>
           </div>
         </div>
         <div className='card bg-primary shadow-soft border-light mb-4'>
@@ -69,11 +74,11 @@ export class Project_DCM extends React.Component {
               Data is stored in a MongoDB database for its parity with the rest of the JavaScript stack.
             </p>
             <p>
-              An nginx webserver acts as a reverse proxy for the Node.js service.
+              An NGINX instance acts as a reverse proxy for the Node.js service.
               The DCM service runs as a dedicated non-privileged user so that any code execution exploits do not affect the broader system.
             </p>
             <img src='/static/img/dcmserver.png' alt='' className='img-responsive rounded shadow-light'/>
-            <small>Pictured: Setting up the Debian server on an old desktop PC that was donated to the church.</small>
+            <small>Pictured: Setting up the Debian server on a desktop PC that was donated to the church.</small>
           </div>
         </div>
         <div className='card bg-primary shadow-soft border-light mb-4'>
