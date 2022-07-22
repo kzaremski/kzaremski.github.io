@@ -4,6 +4,7 @@ import { Project_DCM } from './dcm';
 import { Project_Groshi } from './groshi';
 import { Project_Jolie } from './jolie';
 import { Project_RockSat2020 } from './rocksat';
+import { Project_BBYSaleTracker } from './bbysaletracker';
 
 class Project extends React.Component {
   project = this.props.project;
@@ -35,6 +36,7 @@ export default class ProjectIndex extends React.Component {
     super(props);
 
     this.projects = [
+      Project_BBYSaleTracker,
       Project_RockSat2020,
       Project_DCM,
       /*Project_Groshi,*/
