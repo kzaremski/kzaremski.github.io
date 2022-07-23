@@ -15,3 +15,45 @@
 	position: sticky;
 	top: 80px;
 }
+
+.top-link {
+  transition: all .25s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3em 3em 0;
+  border-radius: 20%;
+  padding: .2em;
+  width: 60px;
+  height: 60px;
+  background-color: #7d7d7d;
+}
+
+.top-link.show {
+  visibility: visible;
+  opacity: 0.3;
+}
+
+.top-link.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.top-link svg {
+  fill: rgb(234, 234, 234);
+  width: 24px;
+  height: 12px;
+}
+
+.top-link:hover {
+  background-color: #cacaca;
+}
+
+.top-link:hover svg {
+  fill: #000000;
+}
