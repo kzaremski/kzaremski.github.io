@@ -63,6 +63,16 @@ export class Project_RockSat2020 extends React.Component {
             </p>
           </div>
         </div>
+        <div className='card bg-primary shadow-soft border-light mb-4'>
+          <div className='card-body'>
+            <h4>Source Code</h4>
+            <p className='card-text'>
+              The source code that ran the payload is freely available on GitHub.
+              The original coder is the owner of the repository.
+              <a href='https://github.com/ShekelsBot/RockSat2020' target='_blank' className='text-secondary'>https://github.com/ShekelsBot/RockSat2020</a>
+            </p>
+          </div>
+        </div>
       </div>
     );
   }
