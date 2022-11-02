@@ -77,8 +77,8 @@ export class Project_DCM extends React.Component {
               An NGINX instance acts as a reverse proxy for the Node.js service.
               The DCM service runs as a dedicated non-privileged user so that any code execution exploits do not affect the broader system.
             </p>
-            <img src='/static/img/dcmserver.png' alt='' className='img-responsive rounded shadow-light'/>
-            <small>Pictured: Setting up the Debian server on a desktop PC that was donated to the church.</small>
+            {/*<img src='/static/img/dcmserver.png' alt='' className='img-responsive rounded shadow-light'/> 
+            <small>Pictured: Setting up the Debian server on a desktop PC that was donated to the church.</small>*/}
           </div>
         </div>
         <div className='card bg-primary shadow-soft border-light mb-4'>

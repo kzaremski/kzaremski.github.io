@@ -20,7 +20,7 @@ export default class MainRouter extends React.Component {
                 </div>
                 <div className='card-body'>
                   <h3 className='h5 mb-1 font-weight-bold'>Konstantin Zaremski</h3>
-                  <span className='h6 font-weight-normal text-gray'>Web Developer, Compsci. Student</span>
+                  <span className='h6 font-weight-normal text-gray'>Software Developer, Compsci. Student</span>
                   <p className='card-text text-secondary mt-2'><i className='fas fa-map-marker mr-1'></i> Denver, Colorado</p>
                   <div className='list-group shadow-inset rounded'>
                     <NavLink className='list-group-item py-2' activeClassName='bg-secondary text-white' to='/' exact><i className='fas fa-address-card mr-2'></i>Introduction</NavLink>
