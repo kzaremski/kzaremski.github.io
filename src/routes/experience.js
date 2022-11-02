@@ -33,7 +33,7 @@ export default class Experience extends React.Component {
         ]
       },
       {
-        title: <>Full Stack Web Developer <span className='ml-2 bg-dark text-white p-1 rounded-lg' style={{'font-size': '0.5em'}}>Single Project Basis</span></>,
+        title: <>Full Stack Web Developer <span className='ml-2 bg-dark text-white p-1 rounded-lg' style={{fontSize: '0.5em'}}>Single Project Basis</span></>,
         company: 'David Clifton Ministries',
         location: 'Lakewood, CO',
         start: 'Jan 2021',
@@ -71,7 +71,7 @@ export default class Experience extends React.Component {
         ]
       },*/
       {
-        title: <>Web Designer <span className='ml-2 bg-dark text-white p-1 rounded-lg' style={{'font-size': '0.5em'}}>Single Project Basis</span></>,
+        title: <>Web Designer <span className='ml-2 bg-dark text-white p-1 rounded-lg' style={{fontSize: '0.5em'}}>Single Project Basis</span></>,
         company: 'Jolie Stationary',
         location: 'Denver, CO',
         start: 'Oct 2017',

@@ -52,10 +52,19 @@ export class Project_RockSat2020 extends React.Component {
         </div>
         <div className='card bg-primary shadow-soft border-light mb-4'>
           <div className='card-body'>
+            <h4>Still Image Near Apogee</h4>
+            <img src='/static/img/rocksat_space.png' alt='' className='img-responsive rounded shadow-light'/>
+            <small>Please see NASA links below in the conclusion section for full video.</small>
+          </div>
+        </div>
+        <div className='card bg-primary shadow-soft border-light mb-4'>
+          <div className='card-body'>
             <h4>Conclusion</h4>
             <p className='card-text'>
               After passing NASA's own testing for aerospaceworthiness in the Summer of 2021, the payload launched on August 19, 2021 and successfully delivered a 1:57 high resolution virtual reality video and sensor data from the edge of space.
               <ul className='mt-2'>
+                <li><b><a href='https://scitechdaily.com/hitch-a-virtual-ride-on-a-nasa-sounding-rocket-view-earth-from-98-miles-up/' target='_blank' className='text-info'>Hitch a Virtual Ride on a NASA Sounding Rocket – View Earth From 98 Miles Up (12/20/2022)</a></b></li>
+                <li><a href='https://www.youtube.com/watch?v=MQGmEVEjYq4' target='_blank' className='text-info'>Official Video: 360 View from a NASA Sounding Rocket (12/6/2021)</a></li>
                 <li><a href='https://www.youtube.com/watch?v=4JjNnUVBtUw' target='_blank' className='text-secondary'>NASA Livestream of the Launch (8/19/2021)</a></li>
                 <li><a href='https://shoredailynews.com/headlines/nasa-to-launch-sounding-rocket-tonight/' target='_blank' className='text-secondary'>Shore Daily News: Sounding Rocket Launch (8/19/2021)</a></li>
                 <li><a href='https://vtx.vt.edu/articles/2021/09/aoe-rocksatx.html' target='_blank' className='text-secondary'>Mission accomplished: RockSat-X team witnesses experiment launched into space (9/28/2021)</a></li>
