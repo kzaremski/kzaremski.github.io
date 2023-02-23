@@ -26,7 +26,7 @@ export default class Education extends React.Component {
           <div className='card-body'>
             <p className='card-text'>
               <i className='fas fa-school mr-2'></i>ThunderRidge High School<i className='fas fa-calendar mr-2 ml-3'></i>2018<br/>
-              Attended college level classes in high school until diagnosed with cancer in 2016.<br/>
+              Attended AP level classes in high school until diagnosed with cancer in 2016.<br/>
               Finished instead with a GED in February of 2018.
             </p>
           </div>
