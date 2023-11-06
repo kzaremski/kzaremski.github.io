@@ -5,15 +5,14 @@
     <link>https://kzaremski.github.io/</link>
     <description>Recent content on Konstantin Zaremski</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://kzaremski.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="https://kzaremski.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Konstantin Zaremski</title>
       <link>https://kzaremski.github.io/</link>
       <pubDate>Mon, 30 Oct 2023 13:19:04 -0600</pubDate>
-      
       <guid>https://kzaremski.github.io/</guid>
       <description>testing</description>
     </item>
-    
   </channel>
 </rss>
