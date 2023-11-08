@@ -1,4 +1,3 @@
-
 # kzaremski.github.io
+My Github pages portfolio, rebuilt using Hugo as a project to learn hugo.
 
-My Githup Pages portfolio site, now with React!

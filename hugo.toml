@@ -1,5 +1,50 @@
 baseURL = 'https://kzaremski.github.io/'
 languageCode = 'en-us'
-title = 'Konstantin Zaremski'
+title = "Konstantin Zaremski"
 publishDir = 'docs'
 relativeURLs = true
+disableKinds = ['taxonomy']
+
+[[menu.main]]
+    name = "Introduction"
+    [menu.main.params]
+        icon = "fa-address-card"
+    weight = 1
+    url = "/"
+    identifier = "index"
+[[menu.main]]
+    name = "Education"
+    [menu.main.params]
+        icon = "fa-graduation-cap"
+    weight = 2
+    url = "/education"
+    identifier = "education"
+[[menu.main]]
+    name = "Skills"
+    [menu.main.params]
+        icon = "fa-pencil-ruler"
+    weight = 3
+    url = "/skills"
+    identifier = "skills"
+[[menu.main]]
+    name = "Projects"
+    [menu.main.params]
+        icon = "fa-project-diagram"
+    weight = 4
+    url = "/projects"
+    identifier = "projects"
+[[menu.main]]
+    name = "Experience"
+    [menu.main.params]
+        icon = "fa-briefcase"
+    weight = 5
+    url = "/experience"
+    identifier = "experience"
+[[menu.main]]
+    name = "Contact"
+    [menu.main.params]
+        icon = "fa-phone"
+    weight = 6
+    url = "/contact"
+    identifier = "contact"
+
