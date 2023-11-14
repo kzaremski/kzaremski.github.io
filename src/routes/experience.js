@@ -6,6 +6,17 @@ export default class Experience extends React.Component {
     
     this.experience = [
       {
+        title: 'Consultation Agent',
+        company: 'Geek Squad',
+        location: 'Lone Tree, CO',
+        start: 'December 2022',
+        end: 'Present',
+        description: [
+          'Providing outstanding computer support and education to clients, ensuring long term relationships and patronage',
+          'Documenting issues and recommendations in detail for other technicians to take over'
+        ]
+      },
+      {
         title: 'Frontend Developer',
         company: 'NCH Software',
         location: 'Greenwood Village, CO',
