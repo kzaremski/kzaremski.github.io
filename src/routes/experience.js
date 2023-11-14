@@ -12,8 +12,8 @@ export default class Experience extends React.Component {
         start: 'December 2022',
         end: 'Present',
         description: [
-          'Providing outstanding computer support and education to clients, ensuring long term relationships and patronage',
-          'Documenting issues and recommendations in detail for other technicians to take over'
+          'Providing outstanding computer support and education to clients, ensuring long term relationships and patronage.',
+          'Documenting issues and recommendations in detail for other technicians to take over.'
         ]
       },
       {
@@ -23,11 +23,11 @@ export default class Experience extends React.Component {
         start: 'December 2021',
         end: 'March 2022',
         description: [
-          'Performed frontend feature updates, maintenance, and bug fixes for the Brisk Cloudware family of business web applications, JavaScript',
-          'Implemented in-house branded subscription management UI supplanting the default Stripe views',
-          'Manifested outstanding user experiences through style and functional overhauls',
-          'Collaborated with other developers and management in every step of the development lifecycle',
-          'Capitalized on prior experience to perform Linux and Windows server administration tasks'
+          'Performed frontend feature updates, maintenance, and bug fixes for the Brisk Cloudware family of business web applications.',
+          'Implemented in-house branded subscription management UI supplanting the default Stripe views.',
+          'Manifested outstanding user experiences through style and functional overhauls.',
+          'Collaborated with other developers and management in every step of the development lifecycle.',
+          'Capitalized on prior experience to perform Linux and Windows server administration tasks.'
         ]
       },
       {
@@ -37,10 +37,10 @@ export default class Experience extends React.Component {
         start: 'June 2021',
         end: 'December 2021',
         description: [
-          'Provided computer support and education to clients',
-          'Documented issues and recommendations in detail for advanced repair specialists to take over',
-          'Tested and reconditioned returned products',
-          'Delivered outstanding experiences to build long term client relationships and enduring patronage'
+          'Provided computer support and education to clients.',
+          'Documented issues and recommendations in detail for advanced repair specialists to take over.',
+          'Tested and reconditioned returned products.',
+          'Delivered outstanding experiences to build long term client relationships and enduring patronage.'
         ]
       },
       {
@@ -50,11 +50,11 @@ export default class Experience extends React.Component {
         start: 'January 2021',
         end: 'May 2021',
         description: [
-          'Implemented internal food pantry management application using React, Express, and MongoDB',
-          'Migrated data from existing MS Access database',
-          'Communicated progress of project with management and met moving project requirements',
-          'Trained ministry volunteers on operation of the software',
-          'Furnished general IT support and improvements with the ministry\'s network and computers'
+          'Implemented internal food pantry management application using React, Express, and MongoDB.',
+          'Migrated data from existing MS Access database.',
+          'Communicated progress of project with management and met moving project requirements.',
+          'Trained ministry volunteers on operation of the software.',
+          'Furnished general IT support and improvements with the ministry\'s network and computers.'
         ]
       },
       {
@@ -64,8 +64,8 @@ export default class Experience extends React.Component {
         start: 'November 2019',
         end: 'June 2021',
         description: [
-          'Connected customers to comprehensive solutions encompassing the spectrum of products, software, and services that Best Buy has to offer',
-          'Maintained positive vendor relationships by delivering unbiased sales recommendations'
+          'Connected customers to comprehensive solutions encompassing the spectrum of products, software, and services that Best Buy has to offer.',
+          'Maintained positive vendor relationships by delivering unbiased sales recommendations.'
         ]
       },
       /*{
