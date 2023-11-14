@@ -50,7 +50,7 @@ export class Project_BBYSaleTracker extends React.Component {
             </p>
             <h5>Screenshots</h5>
             <div className='row'>
-              <div className='col-md-4'><img src='/static/img/bbytoolbox_sc_1.png' className='w-100'/></div>
+              <div className='col-md-4'><img src='/static/img/bbytoolbox_sc_1.png' className='w-100' alt='Screenshot of the sale tracker app'/></div>
               <div className='col-md-4'></div>
               <div className='col-md-4'></div>
             </div>
@@ -96,7 +96,7 @@ export class Project_BBYSaleTracker extends React.Component {
             <h4>Source Code</h4>
             <p>
               When the project/app was actively being used I had the source code private.
-              Now that its use has concluded, I have made the GitHub repostiory public, available here: <a href='https://github.com/kzaremski/bbytoolbox' target='_blank' className='text-secondary'>https://github.com/kzaremski/bbytoolbox</a>.
+              Now that its use has concluded, I have made the GitHub repostiory public, available here: <a href='https://github.com/kzaremski/bbytoolbox' target='_blank' className='text-secondary' rel="noreferrer">https://github.com/kzaremski/bbytoolbox</a>.
             </p>
           </div>
         </div>

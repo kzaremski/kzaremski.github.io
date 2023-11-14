@@ -46,14 +46,14 @@ export class Project_RockSat2020 extends React.Component {
               <li>I applied my Linux system administration skills to create a systemd service unit file that would allow for the control script to start as a part of the control computer's boot process.</li>
               <li>I incorporated the camera mounting and video transfer into the Python script and had it copy files more dynamically to account for system clock inaccuracies.</li>
             </ul>
-            <img src='/static/img/rocksatselfie.png' alt='' className='img-responsive rounded shadow-light'/>
+            <img src='/static/img/rocksatselfie.png' alt='The fully assembled payload and I after a successful test' className='img-responsive rounded shadow-light'/>
             <small>The fully assembled payload and I after a successful test.</small>
           </div>
         </div>
         <div className='card bg-primary shadow-soft border-light mb-4'>
           <div className='card-body'>
             <h4>Still Image Near Apogee</h4>
-            <img src='/static/img/rocksat_space.png' alt='' className='img-responsive rounded shadow-light'/>
+            <img src='/static/img/rocksat_space.png' alt='Still looking at the Earth from apogee' className='img-responsive rounded shadow-light'/>
             <small>Please see NASA links below in the conclusion section for full video.</small>
           </div>
         </div>
@@ -62,14 +62,14 @@ export class Project_RockSat2020 extends React.Component {
             <h4>Conclusion</h4>
             <p className='card-text'>
               After passing NASA's own testing for aerospaceworthiness in the Summer of 2021, the payload launched on August 19, 2021 and successfully delivered a 1:57 high resolution virtual reality video and sensor data from the edge of space.
-              <ul className='mt-2'>
-                <li><b><a href='https://scitechdaily.com/hitch-a-virtual-ride-on-a-nasa-sounding-rocket-view-earth-from-98-miles-up/' target='_blank' className='text-info'>Hitch a Virtual Ride on a NASA Sounding Rocket – View Earth From 98 Miles Up (12/20/2022)</a></b></li>
-                <li><a href='https://www.youtube.com/watch?v=MQGmEVEjYq4' target='_blank' className='text-info'>Official Video: 360 View from a NASA Sounding Rocket (12/6/2021)</a></li>
-                <li><a href='https://www.youtube.com/watch?v=4JjNnUVBtUw' target='_blank' className='text-secondary'>NASA Livestream of the Launch (8/19/2021)</a></li>
-                <li><a href='https://shoredailynews.com/headlines/nasa-to-launch-sounding-rocket-tonight/' target='_blank' className='text-secondary'>Shore Daily News: Sounding Rocket Launch (8/19/2021)</a></li>
-                <li><a href='https://vtx.vt.edu/articles/2021/09/aoe-rocksatx.html' target='_blank' className='text-secondary'>Mission accomplished: RockSat-X team witnesses experiment launched into space (9/28/2021)</a></li>
-              </ul>
             </p>
+            <ul className='mt-2'>
+              <li><b><a rel="noreferrer" href='https://scitechdaily.com/hitch-a-virtual-ride-on-a-nasa-sounding-rocket-view-earth-from-98-miles-up/' target='_blank' className='text-info'>Hitch a Virtual Ride on a NASA Sounding Rocket – View Earth From 98 Miles Up (12/20/2022)</a></b></li>
+              <li><a rel="noreferrer" href='https://www.youtube.com/watch?v=MQGmEVEjYq4' target='_blank' className='text-info'>Official Video: 360 View from a NASA Sounding Rocket (12/6/2021)</a></li>
+              <li><a rel="noreferrer" href='https://www.youtube.com/watch?v=4JjNnUVBtUw' target='_blank' className='text-secondary'>NASA Livestream of the Launch (8/19/2021)</a></li>
+              <li><a rel="noreferrer" href='https://shoredailynews.com/headlines/nasa-to-launch-sounding-rocket-tonight/' target='_blank' className='text-secondary'>Shore Daily News: Sounding Rocket Launch (8/19/2021)</a></li>
+              <li><a rel="noreferrer" href='https://vtx.vt.edu/articles/2021/09/aoe-rocksatx.html' target='_blank' className='text-secondary'>Mission accomplished: RockSat-X team witnesses experiment launched into space (9/28/2021)</a></li>
+            </ul>
           </div>
         </div>
         <div className='card bg-primary shadow-soft border-light mb-4'>
@@ -78,7 +78,7 @@ export class Project_RockSat2020 extends React.Component {
             <p className='card-text'>
               The source code that ran the payload is freely available on GitHub.
               The original coder is the owner of the repository.
-              <a href='https://github.com/ShekelsBot/RockSat2020' target='_blank' className='text-secondary'>https://github.com/ShekelsBot/RockSat2020</a>
+              <a href='https://github.com/ShekelsBot/RockSat2020' target='_blank' className='text-secondary' rel="noreferrer">https://github.com/ShekelsBot/RockSat2020</a>
             </p>
           </div>
         </div>

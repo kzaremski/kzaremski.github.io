@@ -9,8 +9,8 @@ export default class Experience extends React.Component {
         title: 'Frontend Developer',
         company: 'NCH Software',
         location: 'Greenwood Village, CO',
-        start: 'Dec 2021',
-        end: 'Mar 2022',
+        start: 'December 2021',
+        end: 'March 2022',
         description: [
           'Performed frontend feature updates, maintenance, and bug fixes for the Brisk Cloudware family of business web applications, JavaScript',
           'Implemented in-house branded subscription management UI supplanting the default Stripe views',
@@ -23,8 +23,8 @@ export default class Experience extends React.Component {
         title: 'Consultation Agent',
         company: 'Geek Squad',
         location: 'Lone Tree, CO',
-        start: 'Jun 2021',
-        end: 'Dec 2021',
+        start: 'June 2021',
+        end: 'December 2021',
         description: [
           'Provided computer support and education to clients',
           'Documented issues and recommendations in detail for advanced repair specialists to take over',
@@ -36,7 +36,7 @@ export default class Experience extends React.Component {
         title: <>Full Stack Web Developer <span className='ml-2 bg-dark text-white p-1 rounded-lg' style={{fontSize: '0.5em'}}>Single Project Basis</span></>,
         company: 'David Clifton Ministries',
         location: 'Lakewood, CO',
-        start: 'Jan 2021',
+        start: 'January 2021',
         end: 'May 2021',
         description: [
           'Implemented internal food pantry management application using React, Express, and MongoDB',
@@ -50,8 +50,8 @@ export default class Experience extends React.Component {
         title: 'Retail Sales Advisor',
         company: 'Best Buy',
         location: 'Lone Tree, CO',
-        start: 'Nov 2019',
-        end: 'Jun 2021',
+        start: 'November 2019',
+        end: 'June 2021',
         description: [
           'Connected customers to comprehensive solutions encompassing the spectrum of products, software, and services that Best Buy has to offer',
           'Maintained positive vendor relationships by delivering unbiased sales recommendations'
@@ -74,7 +74,7 @@ export default class Experience extends React.Component {
         title: <>Web Designer <span className='ml-2 bg-dark text-white p-1 rounded-lg' style={{fontSize: '0.5em'}}>Single Project Basis</span></>,
         company: 'Jolie Stationary',
         location: 'Denver, CO',
-        start: 'Oct 2017',
+        start: 'October 2017',
         description: [
           'Created cover page for the client\'s site www.jolieandco.com.',
           'Animated logo calligraphy with Adobe After Effects from Adobe Illustrator source files.',
@@ -95,7 +95,9 @@ export default class Experience extends React.Component {
               <div className='card-body'>
                 <h4>{ entry.title }</h4>
                 <p className='card-text'>
-                  <i className='fas fa-building mr-2'></i>{ entry.company }<i className='fas fa-map mr-2 ml-3'></i>{ entry.location }<i className='fas fa-calendar mr-2 ml-3'></i>{ entry.start }{ entry.end ? ' - ' : ''}{ entry.end }
+                  <span className='avoidwrap mr-3'><i className='fas fa-building mr-2'></i>{ entry.company }</span>
+                  <span className='avoidwrap mr-3'><i className='fas fa-map mr-2'></i>{ entry.location }</span>
+                  <span className='avoidwrap mr-3'><i className='fas fa-calendar mr-2'></i>{ entry.start }{ entry.end ? ' - ' : ''}{ entry.end }</span>
                 </p>
                 <ul className='mb-0'>
                   {
