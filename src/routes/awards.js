@@ -16,7 +16,7 @@ export default class Awards extends React.Component {
               <li>Over 30 hours, I and a team of 4 other people built a multi-university event aggregator website with Node.js and MongoDB.</li>
               <li>Judges noted that the amount of progress that we made in the brief span of the event was remarkable.</li>
             </ul>
-            <Link className='card-text text-secondary' to='/projects/hack23'>Read more about our project on it's respective project page.</Link>
+            <Link className='card-text text-secondary' to='/projects/hack23'>Read more about our project here.</Link>
           </div>
         </div>
         <div className='card bg-primary shadow-soft border-light mb-4'>

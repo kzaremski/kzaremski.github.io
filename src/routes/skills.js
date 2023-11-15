@@ -7,7 +7,7 @@ export default class Skills extends React.Component {
     this.skills = {
       tools: ['Git', 'Subversion', 'UNIX/Linux Environments (Debian, Ubuntu, RHEL & CentOS)', 'GitHub', 'Adobe Creative Cloud', 'Shopify', 'Microsoft Office', 'Shell Scripting', 'Visual Studio', 'Windows Server', 'Microsoft Azure'],
       technologies: ['Node.js', 'Express.js', 'React', 'JQuery', 'AJAX', 'REST', 'JSON', 'Bootstrap', 'HTML5 Canvas', 'Babel', 'Webpack', 'Nunjucks', 'WordPress', 'WebSockets', 'Stripe Payments (API & webhooks)'],
-      languages: ['Java', 'HTML5', 'CSS/SCSS', 'JavaScript', 'Python', 'SQL'],
+      languages: ['Java', 'Python', 'JavaScript', 'HTML5', 'CSS/SCSS', 'SQL'],
       databases: ['MongoDB', 'PostgreSQL', 'MySQL', 'SQLite'],
       expertise: ['Full Stack Web Development', 'Responsive Web Design', 'Data Visualization', 'Retail Sales', 'Frontend Web Development', 'Web Applications']
     }
