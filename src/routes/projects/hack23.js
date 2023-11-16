@@ -23,7 +23,7 @@ const LiveDemoSection = () => {
 export class Project_Hackathon2023 extends React.Component {
   manifest = {
     title: 'MSU-DU Hackathon 2023 (uConnect)',
-    date: 'October 2023',
+    date: 'Oct 2023',
     description: 'Over 30 hours, I and a team of 4 other people built a multi-university event aggregator website with Node.js and MongoDB.',
     tags: ['Web Development', 'Bootstrap', 'Node.js', 'MongoDB', 'Full Stack', 'Web Design'],
     banner: '/static/img/hack23.png',

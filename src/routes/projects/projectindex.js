@@ -6,6 +6,7 @@ import { Project_Jolie } from './jolie';
 import { Project_RockSat2020 } from './rocksat';
 import { Project_BBYSaleTracker } from './bbysaletracker';
 import { Project_Hackathon2023 } from './hack23';
+import { Project_AppleNotesExporter } from './applenotesexporter';
 
 class Project extends React.Component {
   project = this.props.project;
@@ -34,6 +35,7 @@ class Project extends React.Component {
 
 const projects = [
   Project_Hackathon2023,
+  Project_AppleNotesExporter,
   Project_BBYSaleTracker,
   Project_RockSat2020,
   Project_DCM,
