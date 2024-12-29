@@ -6,6 +6,20 @@ export default class Experience extends React.Component {
     
     this.experience = [
       {
+        title: 'IT Service Desk Technician',
+        company: 'Metropolitan State University of Denver',
+        location: 'Denver, CO',
+        start: 'August 2024',
+        end: 'Present',
+        description: [
+          'Rendering call center and front desk IT support services to MSU Denver students, staff, and faculty.',
+          'Administering user account profiles and security in Microsoft Azure, Active Directory, and Intune.',
+          'Utilizing deductive reasoning to diagnose, escalate, and resolve hardware, software, and network issues.',
+          'Tracking support requests, incidents, interactions, and resolutions in the TeamDynamix management software.',
+          'Collaborating with other teams to orchestrate the resolution of specialized issues outside the scope of the service desk.',
+        ]
+      },
+      {
         title: 'Consultation Agent',
         company: 'Geek Squad',
         location: 'Lone Tree, CO',
@@ -44,11 +58,12 @@ export default class Experience extends React.Component {
         ]
       },
       {
-        title: <>Full Stack Web Developer <span className='ml-2 bg-dark text-white p-1 rounded-lg' style={{fontSize: '0.5em'}}>Single Project Basis</span></>,
+        title: 'Full Stack Web Developer',
         company: 'David Clifton Ministries',
         location: 'Lakewood, CO',
         start: 'January 2021',
         end: 'May 2021',
+        freelance: true,
         description: [
           'Implemented internal food pantry management application using React, Express, and MongoDB.',
           'Migrated data from existing MS Access database.',
@@ -82,10 +97,11 @@ export default class Experience extends React.Component {
         ]
       },*/
       {
-        title: <>Web Designer <span className='ml-2 bg-dark text-white p-1 rounded-lg' style={{fontSize: '0.5em'}}>Single Project Basis</span></>,
+        title: 'Web Designer',
         company: 'Jolie Stationary',
         location: 'Denver, CO',
         start: 'October 2017',
+        freelance: true,
         description: [
           'Created cover page for the client\'s site www.jolieandco.com.',
           'Animated logo calligraphy with Adobe After Effects from Adobe Illustrator source files.',
@@ -96,15 +112,17 @@ export default class Experience extends React.Component {
     ];
   }
 
+  projectBasisLabel = <span className='ml-2 bg-dark text-white p-1 rounded-lg' style={{fontSize: '0.5em'}}>Freelance / Project Basis</span>;
+
   render() {
     return (
       <div>
         <h1 className='px-4'>Experience</h1>
         {
           this.experience.map((entry) =>
-            <div className='card bg-primary shadow-soft border-light mb-4' key={ entry.title + entry.company }>
+            <div className='card bg-primary shadow-soft border-light mb-4' key={ entry.title + entry.company + entry.start }>
               <div className='card-body'>
-                <h4>{ entry.title }</h4>
+                <h4>{ entry.title } { entry.freelance ? this.projectBasisLabel : '' }</h4>
                 <p className='card-text'>
                   <span className='avoidwrap mr-3'><i className='fas fa-building mr-2'></i>{ entry.company }</span>
                   <span className='avoidwrap mr-3'><i className='fas fa-map mr-2'></i>{ entry.location }</span>

@@ -21,7 +21,13 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-window.onload = () => {
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+window.onload = async () => {
+  await sleep(200);
+
   // Set a variable for our button element.
   const scrollToTopButton = document.getElementById('js-top');
   
@@ -56,8 +62,8 @@ window.onload = () => {
   };
   
   // When the button is clicked, run our ScrolltoTop function above!
-  scrollToTopButton.onclick = function(e) {
+  scrollToTopButton.addEventListener('click', function(e) {
     e.preventDefault();
     scrollToTop();
-  }
+  });
 }

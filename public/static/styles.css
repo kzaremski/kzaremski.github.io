@@ -59,3 +59,24 @@
 }
 
 span.avoidwrap { display:inline-block; }
+
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(20px, auto);
+  justify-content: center;	
+  gap: 16px;
+}
+
+.project-grid > * {
+  width: 200px;
+  float: left;  
+  margin: 16px;
+}
+
+@supports (display: grid) {
+  .project-grid > * {
+    margin: 0 auto;
+  }
+}

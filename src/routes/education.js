@@ -11,6 +11,10 @@ export default class Education extends React.Component {
             <p className='card-text'>
               <i className='fas fa-school mr-2'></i>Metropolitan State University of Denver<i className='fas fa-calendar mr-2 ml-3'></i>2025 <small>(Expected)</small><br/>
             </p>
+            <ul className='card-text'>
+              <li>Cumulative GPA: 3.89/4.0 (in progress)</li>
+              <li>Upper Division Coursework & Electives: Machine Learning, Cloud Computing, Networking and Distributed Computing, Algorithms and Algorithm Analysis</li>
+            </ul>
           </div>
         </div>
         <div className='card bg-primary shadow-soft border-light mb-4'>
