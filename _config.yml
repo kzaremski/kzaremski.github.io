@@ -37,6 +37,10 @@ defaults:
     values:
       layout: "default"
 
+# Include in processing
+include:
+  - google677fa7735255d11b.html
+
 # Exclude from processing
 exclude:
   - Gemfile
