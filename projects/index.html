@@ -1,0 +1,32 @@
+---
+layout: default
+title: Projects
+---
+
+<div>
+  <h1 class="px-4">Projects</h1>
+  <div class="row">
+    {% assign sorted_projects = site.projects | sort: 'order' %}
+    {% for project in sorted_projects %}
+    <div class="col-xl-4 col-lg-6 mb-3">
+      <div class="card bg-primary border-light shadow-soft">
+        <div class="card-header p-3">
+          <img src="{{ project.banner | relative_url }}" class="card-img-top rounded" alt="Project Banner">
+        </div>
+        <div class="card-body pt-2">
+          <div class="media d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <span class="small"><span class="far fa-calendar-alt mr-2"></span>{{ project.period }}</span>
+            </div>
+          </div>
+          <h3 class="h5 card-title mt-2 mb-2">{{ project.title }}</h3>
+          <p class="card-text">{{ project.description }}</p>
+          <div class="d-flex flex-row">
+            <a href="{{ project.url | relative_url }}" class="ml-auto btn btn-primary animate-down-2">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

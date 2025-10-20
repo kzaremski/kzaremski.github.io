@@ -1,0 +1,35 @@
+---
+layout: default
+title: Blog
+---
+
+<div>
+  <h1 class="px-4">Blog</h1>
+
+  {% if site.posts.size > 0 %}
+  <div class="row">
+    {% for post in site.posts %}
+    <div class="col-12 mb-3">
+      <div class="card bg-primary shadow-soft border-light">
+        <div class="card-body">
+          <h3 class="h4 card-title mb-2">
+            <a href="{{ post.url | relative_url }}" class="text-dark">{{ post.title }}</a>
+          </h3>
+          <p class="text-muted small">
+            <i class="far fa-calendar mr-2"></i>{{ post.date | date: "%B %d, %Y" }}
+          </p>
+          <p class="card-text">{{ post.excerpt }}</p>
+          <a href="{{ post.url | relative_url }}" class="btn btn-primary animate-down-2">Read More</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="card bg-primary shadow-soft border-light mb-4">
+    <div class="card-body">
+      <p class="card-text">No blog posts yet. Check back soon!</p>
+    </div>
+  </div>
+  {% endif %}
+</div>

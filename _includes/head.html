@@ -1,0 +1,22 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  <link rel="icon" type="image/jpg" href="{{ '/assets/img/pfp.jpg' | relative_url }}">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{{ '/assets/css/fontawesome/fontawesome-free/css/all.min.css' | relative_url }}">
+
+  <!-- Bootstrap & Neumorphism UI -->
+  <link rel="stylesheet" href="{{ '/assets/css/bootstrap.css' | relative_url }}">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+
+  {% seo %}
+</head>
