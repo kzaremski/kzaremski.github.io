@@ -1,12 +1,37 @@
 # Site settings
 title: Konstantin Zaremski
-email: your-email@example.com
+email: konstantin.zaremski@gmail.com
 description: >-
   Konstantin Zaremski is a fast learning and technology obsessed young professional
   with experience and exposure covering the gamut of web and related technologies
   from the front end to the back end.
 baseurl: ""
 url: "https://konstantin.zarem.ski"
+
+# Author information for SEO
+author:
+  name: Konstantin Zaremski
+  email: konstantin.zaremski@gmail.com
+  twitter:
+  picture: /assets/img/pfp.jpg
+
+# Social profiles for SEO
+social:
+  name: Konstantin Zaremski
+  links:
+    - https://www.linkedin.com/in/konstantinzaremski
+    - https://github.com/kzaremski
+
+# SEO tag configuration
+logo: /assets/img/pfp.jpg
+
+# Open Graph and Twitter Card defaults
+defaults_seo:
+  type: website
+  image: /assets/img/pfp.jpg
+  twitter:
+    card: summary
+    site: "@konstantinzaremski"
 
 # Build settings
 markdown: kramdown
@@ -40,6 +65,7 @@ defaults:
 # Include in processing
 include:
   - google677fa7735255d11b.html
+  - robots.txt
 
 # Exclude from processing
 exclude:

@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Introduction
+title: Konstantin Zaremski
+description: Konstantin Zaremski is a Computer Science student and software developer in Denver, Colorado seeking entry-level positions and internships.
 ---
 
 # Introduction

@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
 
-  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% if page.title == "" or page.title == site.title or page.title == nil %}{{ site.title }}{% else %}{{ page.title }} - {{ site.title }}{% endif %}</title>
 
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
@@ -19,4 +19,40 @@
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 
   {% seo %}
+
+  <!-- JSON-LD Structured Data for Personal Profile -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Konstantin Zaremski",
+    "url": "{{ site.url }}",
+    "image": "{{ site.url }}/assets/img/pfp.jpg",
+    "jobTitle": "Computer Science Student",
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "name": "Metropolitan State University of Denver"
+    },
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Metropolitan State University of Denver"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Arapahoe Community College"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Denver",
+      "addressRegion": "Colorado"
+    },
+    "email": "konstantin.zaremski@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/konstantinzaremski",
+      "https://github.com/kzaremski"
+    ]
+  }
+  </script>
 </head>

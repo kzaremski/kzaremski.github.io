@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Awards
+description: Awards and achievements earned by Konstantin Zaremski including First Place at MSU Denver-DU Joint Hackathon 2023 and ACC Coding Competition.
 ---
 
 # Awards

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Contact
+description: Get in touch with Konstantin Zaremski via email, LinkedIn, GitHub, or Telegram. Open to software developer positions and internships.
 ---
 
 # Contact
@@ -11,11 +12,17 @@ title: Contact
   </div>
 </div>
 
+<div class="card bg-primary shadow-soft border-light mb-4">
+  <div class="card-body">
+    <p class="card-text"><i class="fas fa-envelope mr-2"></i>Email: <b>konstantin.zaremski@gmail.com</b></p>
+  </div>
+</div>
+
 <div class="row">
   <div class="col-md-6 mb-4">
-    <button type="button" class="btn btn-primary animate-down-2 btn-block" data-toggle="modal" data-target="#emailModal">
+    <a href="mailto:konstantin.zaremski@gmail.com" class="btn btn-primary animate-down-2 d-block">
       <i class="fas fa-envelope mr-2"></i>Email
-    </button>
+    </a>
   </div>
   <div class="col-md-6 mb-4">
     <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/konstantinzaremski" class="btn btn-primary animate-down-2 d-block text-secondary">
@@ -33,35 +40,3 @@ title: Contact
     </a>
   </div>
 </div>
-
-<!-- Email Modal -->
-<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content bg-primary border-light">
-      <div class="modal-header">
-        <h5 class="modal-title" id="emailModalLabel">Email</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body text-center">
-        <p class="mb-3">Click below to send me an email:</p>
-        <a id="emailLink" href="#" class="btn btn-secondary btn-lg">
-          <i class="fas fa-envelope mr-2"></i><span id="emailText"></span>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  // Decode base64 email when modal is shown
-  document.addEventListener('DOMContentLoaded', function() {
-    var emailModal = document.getElementById('emailModal');
-    emailModal.addEventListener('show.bs.modal', function (event) {
-      var decodedEmail = atob('a29uc3RhbnRpbi56YXJlbXNraUBnbWFpbC5jb20=');
-      document.getElementById('emailLink').href = 'mailto:' + decodedEmail;
-      document.getElementById('emailText').textContent = decodedEmail;
-    });
-  });
-</script>

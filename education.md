@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Education
+description: Konstantin Zaremski's educational background including a Bachelor of Science in Computer Science from Metropolitan State University of Denver with a 3.89 GPA.
 ---
 
 # Education
