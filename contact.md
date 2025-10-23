@@ -39,4 +39,9 @@ description: Get in touch with Konstantin Zaremski via email, LinkedIn, GitHub, 
       <i class="fab fa-telegram mr-2"></i>Telegram
     </a>
   </div>
+  <div class="col-md-6 mb-4">
+    <a target="_blank" rel="noopener noreferrer" href="https://www.paypal.com/donate/?business=9PAFMS3SNB4VL&no_recurring=0&currency_code=USD" class="btn btn-primary animate-down-2 d-block text-info">
+      <i class="fab fa-paypal mr-2"></i>Donate via PayPal
+    </a>
+  </div>
 </div>
