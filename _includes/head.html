@@ -7,16 +7,24 @@
 
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
-  <link rel="icon" type="image/jpg" href="{{ '/assets/img/pfp.jpg' | relative_url }}">
+  <!-- Preconnect to external font resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ '/assets/css/fontawesome/fontawesome-free/css/all.min.css' | relative_url }}">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/favicon-16x16.png' | relative_url }}">
 
-  <!-- Bootstrap & Neumorphism UI -->
+  <!-- Critical CSS -->
   <link rel="stylesheet" href="{{ '/assets/css/bootstrap.css' | relative_url }}">
-
-  <!-- Custom Styles -->
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+
+  <!-- Font display swap for Font Awesome -->
+  <link rel="stylesheet" href="{{ '/assets/css/font-display-swap.css' | relative_url }}">
+
+  <!-- Non-critical CSS - Font Awesome -->
+  <link rel="preload" href="{{ '/assets/css/fontawesome/fontawesome-free/css/all.min.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ '/assets/css/fontawesome/fontawesome-free/css/all.min.css' | relative_url }}"></noscript>
 
   {% seo %}
 

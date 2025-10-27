@@ -1,0 +1,16 @@
+/* Font display swap override for Font Awesome */
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../fontawesome/fontawesome-free/webfonts/fa-solid-900.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fontawesome/fontawesome-free/webfonts/fa-brands-400.woff2') format('woff2');
+}
