@@ -4,13 +4,13 @@ title: Konstantin Zaremski
 description: Konstantin Zaremski is a Computer Science student and software developer in Denver, Colorado seeking entry-level positions and internships.
 ---
 
-# Introduction
+# Konstantin Zaremski
 
 <div class="card bg-primary shadow-soft border-light mb-4">
   <div class="card-body">
     <p class="card-text">
-      Hello!
-      My name is Konstantin and I am a fast learning and technology-obsessed young professional with exposure covering the gamut of web and related technologies from the front end to the back end.
+      Hello! I'm <strong>Konstantin Zaremski</strong>, a Computer Science student and software developer based in Denver, Colorado.
+      I am a fast learning and technology-obsessed young professional with exposure covering the gamut of web and related technologies from the front end to the back end.
       This has been my passion from an early age.
       Beyond code, I have an eye for the visual and a drive to see projects through to fulfillment.
       <br/><br/>
