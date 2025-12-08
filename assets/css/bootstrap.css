@@ -31714,6 +31714,13 @@ textarea[resize="horizontal"] {
     height: 10rem;
 }
 
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
 .profile-image-small {
     width: 8rem;
     height: 8rem;
