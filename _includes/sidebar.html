@@ -28,7 +28,7 @@
       <a class="list-group-item py-2{% if page.url == '/awards/' %} bg-secondary text-white{% endif %}" href="{{ '/awards/' | relative_url }}">
         <i class="fas fa-award mr-2"></i>Awards
       </a>
-      <a class="list-group-item py-2{% if page.url contains '/blog' %} bg-secondary text-white{% endif %}" href="{{ '/blog/' | relative_url }}">
+      <a class="list-group-item py-2{% if page.url contains '/blog' or page.layout == 'post' %} bg-secondary text-white{% endif %}" href="{{ '/blog/' | relative_url }}">
         <i class="fas fa-rss mr-2"></i>Blog
       </a>
       <a class="list-group-item py-2{% if page.url == '/contact/' %} bg-secondary text-white{% endif %}" href="{{ '/contact/' | relative_url }}">

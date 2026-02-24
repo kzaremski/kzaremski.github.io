@@ -4,11 +4,11 @@ description: "A step-by-step guide to forensically analyzing a macOS app binary 
 date: 2026-02-24
 ---
 
-I'm [Konstantin Zaremski](https://konstantin.zarem.ski), the author of [Apple Notes Exporter](https://github.com/kzaremski/apple-notes-exporter), a free and open-source macOS app for bulk exporting Apple Notes. I've been building and maintaining it since 2020, and in October 2025 I released version 1.0 — a ground-up rewrite in Swift that directly queries the Apple Notes database for performance.
+I'm [Konstantin Zaremski](https://konstantin.zarem.ski), the author of [Apple Notes Exporter](https://github.com/kzaremski/apple-notes-exporter), a free and open-source macOS app for bulk exporting Apple Notes. I've been building and maintaining it since 2020, and in October 2025 I released version 1.0, a ground-up rewrite in Swift that directly queries the Apple Notes database for performance.
 
-In early 2026, a fan of my project reached out to let me know that someone was selling what appeared to be a repackaged version of my app under the name "Notes Exporter Pro" on [1dot.ai](https://1dot.ai/notes-exporter-macos). They'd slapped a $9.99–$19.99 "Lifetime License" on it via PayPal, added a license key activation system, and were marketing it as their own product.
+In early 2026, a fan of my project reached out to let me know that someone was selling what appeared to be a repackaged version of my app under the name "Notes Exporter Pro" on [1dot.ai](https://1dot.ai/notes-exporter-macos). They'd slapped a $9.99-$19.99 "Lifetime License" on it via PayPal, added a license key activation system, and were marketing it as their own product.
 
-My project is MIT-licensed. The MIT License lets anyone use, modify, and even sell my code — but there's one non-negotiable requirement: **you must include my copyright notice and the license text**. They didn't. They stripped every trace of my name, my copyright, and the MIT license from the binary. That means they had no valid license to distribute my code at all.
+My project is MIT-licensed. The MIT License lets anyone use, modify, and even sell my code, but there's one non-negotiable requirement: **you must include my copyright notice and the license text**. They didn't. They stripped every trace of my name, my copyright, and the MIT license from the binary. That means they had no valid license to distribute my code at all.
 
 Here's exactly how I confirmed it.
 
@@ -16,9 +16,9 @@ Here's exactly how I confirmed it.
 
 Every tool I used comes pre-installed on macOS. You don't need to install anything.
 
-- `strings` — extracts printable strings from binary files
-- `codesign` — inspects code signatures
-- `otool` — object file display tool
+- `strings`: extracts printable strings from binary files
+- `codesign`: inspects code signatures
+- `otool`: object file display tool
 - Terminal.app or any shell
 
 ## Step 1: Inspect the App Bundle Structure
@@ -31,11 +31,11 @@ ls -la "Notes Exporter Pro.app/Contents/"
 
 Here's what I was looking for:
 
-- `Info.plist` — app metadata, bundle ID, developer info, version
-- `MacOS/` — the actual executable binary
-- `Frameworks/` — bundled libraries and dependencies
-- `Resources/` — assets, localization files, etc.
-- `_CodeSignature/` — code signing data
+- `Info.plist`: app metadata, bundle ID, developer info, version
+- `MacOS/`: the actual executable binary
+- `Frameworks/`: bundled libraries and dependencies
+- `Resources/`: assets, localization files, etc.
+- `_CodeSignature/`: code signing data
 
 ## Step 2: Read the Info.plist
 
@@ -73,11 +73,11 @@ Timestamp=Jan 22, 2026 at 9:50:36 PM
 Notarization Ticket=stapled
 ```
 
-Now I had a name. This is a real identity tied to an Apple Developer account — you can't fake this. The binary was signed by **Ramachandran Arumugam Velmurugan** with Apple Team ID **U84Y35UPTV**, and Apple had notarized it.
+Now I had a name. This is a real identity tied to an Apple Developer account; you can't fake this. The binary was signed by **Ramachandran Arumugam Velmurugan** with Apple Team ID **U84Y35UPTV**, and Apple had notarized it.
 
 ## Step 4: Extract Strings from the Binary
 
-This was the most important step. The `strings` command extracts all readable text from a compiled binary — class names, function names, string literals, SQL queries, error messages, URLs, everything.
+This was the most important step. The `strings` command extracts all readable text from a compiled binary: class names, function names, string literals, SQL queries, error messages, URLs, everything.
 
 ```bash
 strings "Notes Exporter Pro.app/Contents/MacOS/Notes Exporter Pro"
@@ -92,7 +92,7 @@ strings "Notes Exporter Pro.app/Contents/MacOS/Notes Exporter Pro" \
   | grep -i -E "AppleNotesDatabaseParser|NoteStoreProto|SyncManifest|ExportConfiguration"
 ```
 
-**`AppleNotesDatabaseParser`** — my custom class for parsing the Apple Notes SQLite database — was right there in the binary. So was **`NoteStoreProto`**, my protobuf schema type. These aren't generic names. I wrote them. Finding them in someone else's binary is a smoking gun.
+**`AppleNotesDatabaseParser`**, my custom class for parsing the Apple Notes SQLite database, was right there in the binary. So was **`NoteStoreProto`**, my protobuf schema type. These aren't generic names. I wrote them. Finding them in someone else's binary is a smoking gun.
 
 ### Searching for my name or attribution
 
@@ -117,7 +117,7 @@ This revealed everything they'd bolted on top of my code:
 - License key activation and validation logic
 - Their support email: `support@1dot.ai`
 
-This is what they added — a paywall around my free, open-source software.
+This is what they added: a paywall around my free, open-source software.
 
 ### Searching for SQL queries and database patterns
 
@@ -147,7 +147,7 @@ These can provide additional evidence of shared code, since developers rarely bo
 ls "Notes Exporter Pro.app/Contents/Frameworks/"
 ```
 
-They were bundling `SwiftProtobuf.framework` — the same protobuf dependency my project uses to parse Apple Notes' protobuf-encoded data. This isn't proof on its own since anyone can use the same library, but it fits the pattern perfectly.
+They were bundling `SwiftProtobuf.framework`, the same protobuf dependency my project uses to parse Apple Notes' protobuf-encoded data. This isn't proof on its own since anyone can use the same library, but it fits the pattern perfectly.
 
 ## Step 6: Check for Embedded Resources
 
@@ -197,7 +197,7 @@ Here's the full picture:
 - Update feed: Sparkle framework pointing to a GitHub releases-only repo
 
 **Evidence of my code:**
-- `AppleNotesDatabaseParser` — my unique class name — directly in the binary
+- `AppleNotesDatabaseParser`, my unique class name, directly in the binary
 - `NoteStoreProto` from my protobuf schema
 - SQL queries using `ZIDENTIFIER`, `ZACCOUNT`, `FallbackImages` patterns matching my database parser
 - `SwiftProtobuf.framework` bundled, same dependency as mine
@@ -228,7 +228,7 @@ git log --all --format='%H %ai %an %s' > git-history-evidence.txt
 
 ## What Constitutes a Violation
 
-The MIT License has one non-negotiable requirement: the copyright notice and license text must be included in all copies or substantial portions of the software. If they strip your name and license, they're in violation — and their right to distribute your code terminates entirely. They didn't just sell my work; they had no valid license to distribute it at all.
+The MIT License has one non-negotiable requirement: the copyright notice and license text must be included in all copies or substantial portions of the software. If they strip your name and license, they're in violation, and their right to distribute your code terminates entirely. They didn't just sell my work; they had no valid license to distribute it at all.
 
 ## What You Can Do If This Happens to You
 
@@ -238,10 +238,10 @@ The MIT License has one non-negotiable requirement: the copyright notice and lic
 4. **Public disclosure** with evidence in relevant communities
 5. **Email them directly** demanding compliance or removal
 
-I've taken several of these steps. The outcome is still pending — I'll update this post as things develop.
+I've taken several of these steps. The outcome is still pending. I'll update this post as things develop.
 
 ## A Note on License Choice
 
-If you're publishing open-source software and you don't want someone to repackage it and sell it as a closed-source product, think carefully about your license. MIT and BSD licenses explicitly allow commercial use and redistribution — the only requirement is attribution. If that's not enough protection for you, consider GPL v3 (requires derivative works to also be open source), AGPL (same as GPL but also covers network use), or a dual-license model where it's free for open-source use and requires a paid license for commercial distribution.
+If you're publishing open-source software and you don't want someone to repackage it and sell it as a closed-source product, think carefully about your license. MIT and BSD licenses explicitly allow commercial use and redistribution; the only requirement is attribution. If that's not enough protection for you, consider GPL v3 (requires derivative works to also be open source), AGPL (same as GPL but also covers network use), or a dual-license model where it's free for open-source use and requires a paid license for commercial distribution.
 
-I learned this the hard way. My code was MIT-licensed, and technically, selling it was allowed — but stripping my attribution was not. Going forward, I've relicensed the project to GPLv3 to prevent this from happening again.
+I learned this the hard way. My code was MIT-licensed, and technically, selling it was allowed, but stripping my attribution was not. Going forward, I've relicensed the project to GPLv3 to prevent this from happening again.

@@ -1,0 +1,106 @@
+/* Rouge syntax highlighting - Monokai theme */
+.highlighter-rouge {
+  margin-bottom: 1rem;
+}
+
+div.highlighter-rouge,
+figure.highlight {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+pre.highlight,
+code.highlight {
+  background: #272822;
+  color: #f8f8f2;
+}
+
+pre.highlight {
+  padding: 1rem 1.25rem;
+  margin: 0;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  border-radius: 0.5rem;
+}
+
+/* Inline code */
+code.language-plaintext {
+  background: rgba(0, 0, 0, 0.08);
+  color: #e83e8c;
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 87.5%;
+}
+
+/* Rouge token colors - Monokai */
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cs,
+.highlight .cd { color: #75715e; } /* Comments */
+
+.highlight .k,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt,
+.highlight .kv { color: #66d9ef; } /* Keywords */
+
+.highlight .kc { color: #66d9ef; } /* Keyword.Constant */
+
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .sh,
+.highlight .sx { color: #e6db74; } /* Strings */
+
+.highlight .sr { color: #e6db74; } /* String.Regex */
+.highlight .si { color: #e6db74; } /* String.Interpol */
+.highlight .se { color: #ae81ff; } /* String.Escape */
+
+.highlight .na { color: #a6e22e; } /* Name.Attribute */
+.highlight .nb { color: #f8f8f2; } /* Name.Builtin */
+.highlight .nc { color: #a6e22e; } /* Name.Class */
+.highlight .nd { color: #a6e22e; } /* Name.Decorator */
+.highlight .ne { color: #a6e22e; } /* Name.Exception */
+.highlight .nf { color: #a6e22e; } /* Name.Function */
+.highlight .ni { color: #f8f8f2; } /* Name.Entity */
+.highlight .nl { color: #f8f8f2; } /* Name.Label */
+.highlight .nn { color: #f8f8f2; } /* Name.Namespace */
+.highlight .no { color: #66d9ef; } /* Name.Constant */
+.highlight .nt { color: #f92672; } /* Name.Tag */
+.highlight .nv { color: #f8f8f2; } /* Name.Variable */
+.highlight .nx { color: #a6e22e; } /* Name.Other */
+
+.highlight .o,
+.highlight .ow { color: #f92672; } /* Operators */
+
+.highlight .p { color: #f8f8f2; } /* Punctuation */
+
+.highlight .m,
+.highlight .mi,
+.highlight .mf,
+.highlight .mh,
+.highlight .mo,
+.highlight .il { color: #ae81ff; } /* Numbers */
+
+.highlight .gd { color: #f92672; } /* Generic.Deleted */
+.highlight .gi { color: #a6e22e; } /* Generic.Inserted */
+.highlight .ge { font-style: italic; } /* Generic.Emph */
+.highlight .gs { font-weight: bold; } /* Generic.Strong */
+.highlight .gh { color: #75715e; } /* Generic.Heading */
+.highlight .gu { color: #75715e; } /* Generic.Subheading */
+.highlight .gl { color: #f8f8f2; } /* Generic.Lineno */
+
+.highlight .w { color: #f8f8f2; } /* Text.Whitespace */
+.highlight .err { color: #f8f8f2; } /* Error */
+
+/* Selection in code blocks */
+.highlight ::selection {
+  background: rgba(166, 226, 46, 0.3);
+}
