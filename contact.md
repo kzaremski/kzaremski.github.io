@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Contact
-description: Get in touch with Konstantin Zaremski via email, LinkedIn, GitHub, or Telegram. Open to software developer positions and internships.
+description: Get in touch with Konstantin Zaremski via email, LinkedIn, GitHub, or Telegram.
 ---
 
 # Contact

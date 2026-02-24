@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Awards
-description: Awards and achievements earned by Konstantin Zaremski including First Place at MSU Denver-DU Joint Hackathon 2023 and ACC Coding Competition.
+description: Awards and achievements earned by Konstantin Zaremski including First Place at MSU Denver-DU Joint Hackathon 2023, ACC Coding Competition, and Verizon Innovative App Challenge.
 ---
 
 # Awards
@@ -29,5 +29,23 @@ description: Awards and achievements earned by Konstantin Zaremski including Fir
     <ul class="card-text">
       <li>Individual competitive programming in Java.</li>
     </ul>
+  </div>
+</div>
+
+<div class="card bg-primary shadow-soft border-light mb-4">
+  <div class="card-body">
+    <h4>Verizon Innovative App Challenge</h4>
+    <p class="card-text">
+      <i class="fas fa-award mr-2"></i>Best in State<i class="fas fa-calendar mr-2 ml-3"></i>2013<br/>
+    </p>
+  </div>
+</div>
+
+<div class="card bg-primary shadow-soft border-light mb-4">
+  <div class="card-body">
+    <h4>Verizon Innovative App Challenge</h4>
+    <p class="card-text">
+      <i class="fas fa-award mr-2"></i>Best in Region<i class="fas fa-calendar mr-2 ml-3"></i>2013<br/>
+    </p>
   </div>
 </div>
