@@ -87,20 +87,29 @@ span.avoidwrap { display:inline-block; }
   }
 }
 
-/* Blog post content styling */
-article .card-body {
+/* Override theme's article p { font-size: 1.27rem; margin-bottom: 2rem } */
+article p,
+article blockquote {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+article li {
   font-size: 0.875rem;
   line-height: 1.7;
 }
 
 article .card-body h2 {
-  font-size: 1.25rem;
-  margin-top: 1.75rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
 }
 
 article .card-body h3 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 article .card-body table {
