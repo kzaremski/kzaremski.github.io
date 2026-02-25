@@ -61,6 +61,14 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+  - scope:
+      path: "google677fa7735255d11b.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "assets/img/jolie/cover.html"
+    values:
+      sitemap: false
 
 # Include in processing
 include:
