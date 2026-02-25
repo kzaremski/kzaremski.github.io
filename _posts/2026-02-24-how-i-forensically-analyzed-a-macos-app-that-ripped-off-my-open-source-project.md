@@ -326,13 +326,13 @@ Their fallback functions use the same SQL queries for `ZFALLBACKIMAGEGENERATION`
 
 ### Column detection
 
-Their decompiled code shows a function that calls `PRAGMA table_info()` and checks for columns named `ZOWNER`, `ZACCOUNT`, `ZTITLE2`, `ZTITLE1`, `ZTITLE` with fallbacks -- the same approach as my [`getTableColumns`][src-getTableColumns] function.
+Their decompiled code shows a function that calls `PRAGMA table_info()` and checks for columns named `ZOWNER`, `ZACCOUNT`, `ZTITLE2`, `ZTITLE1`, `ZTITLE` with fallbacks -- the same approach as my `getTableColumns` function ([source, lines 212-230][src-getTableColumns]).
 
 [src-getTableColumns]: https://github.com/kzaremski/apple-notes-exporter/blob/5453da07b5684178734dc12e2c7c0521253805c8/Apple%20Notes%20Exporter/Apple%20Notes%20Exporter/AppleNotesDatabaseParser.swift#L212-L230
 
 The hex-encoded strings in the decompiled output (`0x52454e574f5a` = `ZOWNER`, `0x544e554f4343415a` = `ZACCOUNT`) confirmed this.
 
-One notable difference: their `fetchAttachmentData` query hardcodes `note.ZACCOUNT as ZACCOUNT` in a two-table join, which matches my code at the v1.0-3 tag. I have since replaced that with dynamic column detection and a three-table account join in commit [`0626d94`](https://github.com/kzaremski/apple-notes-exporter/commit/0626d94). Their binary carries the older version, including a bug where the hardcoded column returns NULL on modern macOS versions. This suggests they forked my code at or around the v1.0-3 release.
+One notable difference: their `fetchAttachmentData` query hardcodes `note.ZACCOUNT as ZACCOUNT` in a two-table join, which matches my code at the v1.0-3 tag. I have since replaced that with dynamic column detection and a three-table account join in commit `0626d94` ([view](https://github.com/kzaremski/apple-notes-exporter/commit/0626d94)). Their binary carries the older version, including a bug where the hardcoded column returns NULL on modern macOS versions. This suggests they forked my code at or around the v1.0-3 release.
 
 ---
 
@@ -461,7 +461,7 @@ I learned this the hard way. Going forward, my project is GPL v3.
 
 *Forensic analysis performed on February 24, 2026.*
 
-**Independent verification:** The DMG analyzed was downloaded from `https://github.com/1dotaidev/apple-notes-exporter-app-releases/releases/download/macapp/Notes.Exporter.Pro.dmg`. Anyone can download it and reproduce these findings using the tools described above.
+**Independent verification:** The DMG analyzed was downloaded from [https://github.com/1dotaidev/apple-notes-exporter-app-releases/releases/download/macapp/Notes.Exporter.Pro.dmg](https://github.com/1dotaidev/apple-notes-exporter-app-releases/releases/download/macapp/Notes.Exporter.Pro.dmg). Anyone can download it and reproduce these findings using the tools described above.
 
 ##### Notes.Exporter.Pro.dmg
 ```
