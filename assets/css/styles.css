@@ -87,33 +87,40 @@ span.avoidwrap { display:inline-block; }
   }
 }
 
-/* Override theme's article p { font-size: 1.27rem; margin-bottom: 2rem } */
+/* Override Neumorphism theme article styles (1.27rem -> 1rem) */
+article h1, article h2, article h3, article h4, article h5, article h6 {
+  margin: 1.5rem 0 0.75rem 0 !important;
+}
+
+article h2 {
+  font-size: 1.35rem !important;
+}
+
+article h3 {
+  font-size: 1.15rem !important;
+}
+
 article p,
 article blockquote {
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
-  line-height: 1.7;
+  font-size: 1rem !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.7 !important;
 }
 
-article li {
-  font-size: 0.875rem;
-  line-height: 1.7;
+article ul li,
+article ol li {
+  font-size: 1rem !important;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.7 !important;
 }
 
-article .card-body h2 {
-  font-size: 1.2rem;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-}
-
-article .card-body h3 {
-  font-size: 1.05rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+article ul,
+article ol {
+  margin-bottom: 1rem !important;
 }
 
 article .card-body table {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   width: 100%;
   margin-bottom: 1rem;
 }

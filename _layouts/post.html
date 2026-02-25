@@ -13,3 +13,11 @@ layout: default
     </div>
   </div>
 </article>
+<script>
+document.querySelectorAll('article a[href^="http"]').forEach(function(a) {
+  if (a.hostname !== window.location.hostname) {
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener noreferrer');
+  }
+});
+</script>
