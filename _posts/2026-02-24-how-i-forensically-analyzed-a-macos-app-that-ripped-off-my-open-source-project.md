@@ -4,7 +4,7 @@ description: "A step-by-step account of how I used strings, codesign, otool, and
 date: 2026-02-24
 ---
 
-I'm [Konstantin Zaremski](https://konstantin.zarem.ski), the author of [Apple Notes Exporter](https://github.com/kzaremski/apple-notes-exporter), a free and open-source macOS app for bulk exporting Apple Notes. I've been building and maintaining it since 2022, and in October 2025 I released version 1.0, a ground-up rewrite in Swift that directly queries the Apple Notes database for performance.
+I'm [Konstantin Zaremski](https://konstantin.zarem.ski), the author of [Apple Notes Exporter](https://github.com/kzaremski/apple-notes-exporter), a free and open-source macOS app for bulk exporting Apple Notes. I've been building and maintaining it since 2023, and in October 2025 I released version 1.0, a ground-up rewrite in Swift that directly queries the Apple Notes database for performance.
 
 In early 2026, a fan of my project reached out to let me know that someone was selling what appeared to be a repackaged version of my app under the name "Notes Exporter Pro" on [1dot.ai](https://1dot.ai/notes-exporter-macos). They'd slapped a $9.99 "Lifetime License" on it via PayPal, added a license key activation system, and were marketing it as their own product across at least six subreddits.
 
@@ -332,7 +332,7 @@ Their decompiled code shows a function that calls `PRAGMA table_info()` and chec
 
 The hex-encoded strings in the decompiled output (`0x52454e574f5a` = `ZOWNER`, `0x544e554f4343415a` = `ZACCOUNT`) confirmed this.
 
-One notable difference: their column detection checks for a single `ZACCOUNT` column, while my v1.1 code checks for `ZACCOUNT7`, `ZACCOUNT4`, `ZACCOUNT3`, etc. with version-specific mappings. Their simpler approach matches a **pre-v1.1 version of my code**, before I added multi-version support. This suggests they forked my code before those improvements were made.
+One notable difference: their `fetchAttachmentData` query hardcodes `note.ZACCOUNT as ZACCOUNT` in a two-table join, which matches my code at the v1.0-3 tag. I have since replaced that with dynamic column detection and a three-table account join in commit [`0626d94`](https://github.com/kzaremski/apple-notes-exporter/commit/0626d94). Their binary carries the older version, including a bug where the hardcoded column returns NULL on modern macOS versions. This suggests they forked my code at or around the v1.0-3 release.
 
 ---
 
@@ -366,7 +366,7 @@ Honesty matters. I investigated several things that turned out not to be evidenc
 - **AppleScript delimiter patterns** (`:::`, `|||`, `;;;`, `@@@`, `~~~`) -- not in any version of my code; their own work
 - **Description text** ("export notes from Apple's Notes.app to Markdown and HTML") -- similar but not verbatim from my README
 - **UI strings** ("Transform your Apple Notes...", iCloud warning) -- not in my source code
-- **Some SQL differences** (`LEFT JOIN ... media ON att.ZMEDIA = media.Z_PK`, `note.ZACCOUNT as ZACCOUNT`) -- not in my code; their modifications
+- **Some SQL differences** (`LEFT JOIN ... media ON att.ZMEDIA = media.Z_PK`) -- not in my code; their modifications
 - **Class names** `DatabaseNotesManager`, `ExportManager`, `NavigationHandler`, `generatePDFWebKit` -- their own classes
 - **`NotesExporterViewModel`** (43 ivars) -- substantially different from my `ExportViewModel`
 
