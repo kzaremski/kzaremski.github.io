@@ -278,9 +278,9 @@ analyzeHeadless /tmp/ghidra_project NEP_Analysis -import nep_arm64
 
 ![Ghidra headless analyzer running against the extracted arm64 binary](/assets/img/forensic/10_ghidra_run.png)
 
-Then I wrote a [custom Ghidra plugin][ghidra-gist] to decompile all 4,188 functions and filter for ones that reference strings from my source code. **15 functions** matched.
+Then I wrote a [custom Ghidra plugin][ghidra-gist] to decompile all 4,188 functions and filter for ones that reference strings from my source code. **15 functions** matched. Due to symbol stripping, function names appeared as `FUN_XXXXXXXX`, but the decompiled pseudocode revealed complete control flow, string constants, and API call sequences.
 
-[ghidra-gist]: https://gist.github.com/kzaremski/aa54e0a585c86479f93ed4437c556955 Due to symbol stripping, function names appeared as `FUN_XXXXXXXX`, but the decompiled pseudocode revealed complete control flow, string constants, and API call sequences.
+[ghidra-gist]: https://gist.github.com/kzaremski/aa54e0a585c86479f93ed4437c556955
 
 ### Attachment resolution: step-by-step control flow match
 
