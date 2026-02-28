@@ -476,5 +476,11 @@ SHA256   149bada63a27a4ef1e1a1fefc6c0f219ff78f0157be947539d968cc11c636d88
 
 *I'll update this post as things develop.*
 
+---
+
+## Update -- February 25, 2026
+
+I have been in contact with the developer at 1dot.ai. I sent a formal compliance notice requesting proper MIT attribution by March 26, 2026. I received a response the same day. The matter is ongoing.
+
 [src-parser]: https://github.com/kzaremski/apple-notes-exporter/blob/5453da07b5684178734dc12e2c7c0521253805c8/Apple%20Notes%20Exporter/Apple%20Notes%20Exporter/AppleNotesDatabaseParser.swift
 [src-table]: https://github.com/kzaremski/apple-notes-exporter/blob/5453da07b5684178734dc12e2c7c0521253805c8/Apple%20Notes%20Exporter/Apple%20Notes%20Exporter/TableParser.swift
