@@ -25,13 +25,10 @@ social:
 # SEO tag configuration
 logo: /assets/img/pfp.jpg
 
-# Open Graph and Twitter Card defaults
-defaults_seo:
-  type: website
-  image: /assets/img/pfp.jpg
-  twitter:
-    card: summary
-    site: "@konstantinzaremski"
+# Twitter Card configuration
+twitter:
+  username: konzski
+  card: summary
 
 # Build settings
 markdown: kramdown
@@ -51,16 +48,19 @@ defaults:
     values:
       layout: "post"
       author: "Konstantin Zaremski"
+      image: /assets/img/pfp.jpg
   - scope:
       path: ""
       type: "projects"
     values:
       layout: "project"
+      image: /assets/img/pfp.jpg
   - scope:
       path: ""
       type: "pages"
     values:
       layout: "default"
+      image: /assets/img/pfp.jpg
   - scope:
       path: "google677fa7735255d11b.html"
     values:

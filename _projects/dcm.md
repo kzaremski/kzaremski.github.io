@@ -5,9 +5,12 @@ period: Jan 2021 - May 2021
 description: I was tasked with building a web-based internal application that would replace their aging MS Access solution used to manage food pantry clients, visits, inventory, etc.
 banner: /assets/img/dcm.png
 order: 5
+tags:
+  - Full Stack
+  - Commercial
 ---
 
-<h1 class="px-4"><span class="h4 text-secondary"><a href="{{ '/projects/' | relative_url }}"><i class="fas fa-folder-open mr-2"></i>Projects/ </a></span>DCM Internal Food Pantry Mangement Application</h1>
+<h1 class=""><span class="h4 text-secondary"><a href="{{ '/projects/' | relative_url }}"><i class="fas fa-folder-open mr-2"></i>Projects/ </a></span>DCM Internal Food Pantry Mangement Application</h1>
 
 <div class="card bg-primary shadow-soft border-light mb-4">
   <div class="card-body">

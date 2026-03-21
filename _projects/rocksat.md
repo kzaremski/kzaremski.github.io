@@ -5,9 +5,13 @@ period: May 2021
 description: The joint Arapahoe Community College and Red Rocks Community College RockSat 2020 team brought me on in early May to help with the final software integration for their RockSat 2020 mission payload.
 banner: /assets/img/rocksat.jpg
 order: 4
+tags:
+  - Academic
+  - Embedded
+  - Python
 ---
 
-<h1 class="px-4"><span class="h4 text-secondary"><a href="{{ '/projects/' | relative_url }}"><i class="fas fa-folder-open mr-2"></i>Projects/ </a></span>RockSat-X 2020</h1>
+<h1 class=""><span class="h4 text-secondary"><a href="{{ '/projects/' | relative_url }}"><i class="fas fa-folder-open mr-2"></i>Projects/ </a></span>RockSat-X 2020</h1>
 
 <div class="card bg-primary shadow-soft border-light mb-4">
   <div class="card-body">

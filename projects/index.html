@@ -4,29 +4,99 @@ title: Projects
 ---
 
 <div>
-  <h1 class="px-4">Projects</h1>
-  <div class="row">
+  <h1 class="">Projects</h1>
+
+  <div class="mb-3">
+    <input type="text" id="project-search" class="form-control bg-primary shadow-inset border-light" placeholder="Search projects...">
+  </div>
+
+  <div class="mb-4" id="tag-filters">
+    <span class="mr-2 font-weight-bold">Filter:</span>
+    <button class="btn btn-sm btn-primary shadow-inset border-light mr-2 mb-2" data-tag="all">All</button>
+    {% assign all_tags = "" | split: "" %}
+    {% for project in site.projects %}
+      {% for tag in project.tags %}
+        {% unless all_tags contains tag %}
+          {% assign all_tags = all_tags | push: tag %}
+        {% endunless %}
+      {% endfor %}
+    {% endfor %}
+    {% assign all_tags = all_tags | sort %}
+    {% for tag in all_tags %}
+    <button class="btn btn-sm btn-primary shadow-soft border-light mr-2 mb-2" data-tag="{{ tag }}">{{ tag }}</button>
+    {% endfor %}
+  </div>
+
+  <div class="row" id="project-list">
     {% assign sorted_projects = site.projects | sort: 'order' %}
     {% for project in sorted_projects %}
-    <div class="col-xl-4 col-lg-6 mb-3">
-      <div class="card bg-primary border-light shadow-soft">
-        <div class="card-header p-3">
-          <img src="{{ project.banner | relative_url }}" class="card-img-top rounded" alt="Project Banner">
-        </div>
-        <div class="card-body pt-2">
-          <div class="media d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center">
-              <span class="small"><span class="far fa-calendar-alt mr-2"></span>{{ project.period }}</span>
-            </div>
+    <div class="col-12 mb-3 project-item" data-tags="{{ project.tags | join: ',' }}" data-title="{{ project.title | downcase }}" data-description="{{ project.description | downcase }}">
+      <a href="{{ project.url | relative_url }}" class="text-decoration-none text-reset d-block">
+      <div class="card bg-primary shadow-soft border-light project-card">
+        <div class="row no-gutters">
+          {% if project.banner %}
+          <div class="col-6 col-md-3 pt-3 pb-3 pl-3 pr-0">
+            <img src="{{ project.banner | relative_url }}" class="rounded w-100" alt="{{ project.title }}">
           </div>
-          <h3 class="h5 card-title mt-2 mb-2">{{ project.title }}</h3>
-          <p class="card-text">{{ project.description }}</p>
-          <div class="d-flex flex-row">
-            <a href="{{ project.url | relative_url }}" class="ml-auto btn btn-primary animate-down-2">Learn More</a>
+          {% endif %}
+          <div class="{% if project.banner %}col-12 col-md-9{% else %}col-12{% endif %}">
+            <div class="card-body">
+              <h3 class="h4 card-title mb-2">{{ project.title }}</h3>
+              <p class="text-muted small">
+                <i class="far fa-calendar-alt mr-2"></i>{{ project.period }}
+              </p>
+              <p class="card-text">{{ project.description }}</p>
+              {% if project.tags %}
+              <div class="mb-0">
+                {% assign sorted_tags = project.tags | sort %}
+                {% for tag in sorted_tags %}
+                <span class="rounded border-light px-2 py-1 bg-primary shadow-inset mr-1 d-inline-block small font-weight-bold">{{ tag }}</span>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>
+      </a>
     </div>
     {% endfor %}
   </div>
 </div>
+
+<script>
+(function() {
+  var activeTag = 'all';
+  var searchQuery = '';
+  var searchInput = document.getElementById('project-search');
+  var items = document.querySelectorAll('.project-item');
+
+  function filterProjects() {
+    items.forEach(function(item) {
+      var matchesTag = activeTag === 'all' || item.getAttribute('data-tags').split(',').indexOf(activeTag) !== -1;
+      var matchesSearch = !searchQuery ||
+        item.getAttribute('data-title').indexOf(searchQuery) !== -1 ||
+        item.getAttribute('data-description').indexOf(searchQuery) !== -1;
+      item.style.display = (matchesTag && matchesSearch) ? '' : 'none';
+    });
+  }
+
+  document.querySelectorAll('#tag-filters button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('#tag-filters button').forEach(function(b) {
+        b.classList.remove('shadow-inset');
+        b.classList.add('shadow-soft');
+      });
+      btn.classList.remove('shadow-soft');
+      btn.classList.add('shadow-inset');
+      activeTag = btn.getAttribute('data-tag');
+      filterProjects();
+    });
+  });
+
+  searchInput.addEventListener('input', function() {
+    searchQuery = this.value.toLowerCase().trim();
+    filterProjects();
+  });
+})();
+</script>

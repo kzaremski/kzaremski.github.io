@@ -4,12 +4,16 @@ title: Blog
 ---
 
 <div>
-  <h1 class="px-4">Blog</h1>
+  <h1 class="">Blog</h1>
 
   {% if site.posts.size > 0 %}
-  <div class="row">
+  <div class="mb-3">
+    <input type="text" id="blog-search" class="form-control bg-primary shadow-inset border-light" placeholder="Search posts...">
+  </div>
+
+  <div class="row" id="blog-list">
     {% for post in site.posts %}
-    <div class="col-12 mb-3">
+    <div class="col-12 mb-3 blog-item" data-title="{{ post.title | downcase }}" data-description="{{ post.excerpt | strip_html | downcase }}">
       <div class="card bg-primary shadow-soft border-light">
         <div class="card-body">
           <h3 class="h4 card-title mb-2">
@@ -33,3 +37,21 @@ title: Blog
   </div>
   {% endif %}
 </div>
+
+<script>
+(function() {
+  var searchInput = document.getElementById('blog-search');
+  if (!searchInput) return;
+  var items = document.querySelectorAll('.blog-item');
+
+  searchInput.addEventListener('input', function() {
+    var query = this.value.toLowerCase().trim();
+    items.forEach(function(item) {
+      var matches = !query ||
+        item.getAttribute('data-title').indexOf(query) !== -1 ||
+        item.getAttribute('data-description').indexOf(query) !== -1;
+      item.style.display = matches ? '' : 'none';
+    });
+  });
+})();
+</script>

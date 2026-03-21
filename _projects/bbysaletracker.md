@@ -5,9 +5,12 @@ period: Jun 2021 - Aug 2021
 description: I built a web app for retail sales associates at my Best Buy location to independently report sales to Microsoft vendor provided labor.
 banner: /assets/img/bbytoolbox.png
 order: 3
+tags:
+  - Commercial
+  - Full Stack
 ---
 
-<h1 class="px-4"><span class="h4 text-secondary"><a href="{{ '/projects/' | relative_url }}"><i class="fas fa-folder-open mr-2"></i>Projects/ </a></span>Best Buy Computing Sale Tracker</h1>
+<h1 class=""><span class="h4 text-secondary"><a href="{{ '/projects/' | relative_url }}"><i class="fas fa-folder-open mr-2"></i>Projects/ </a></span>Best Buy Computing Sale Tracker</h1>
 
 <div class="card bg-primary shadow-soft border-light mb-4">
   <div class="card-body">

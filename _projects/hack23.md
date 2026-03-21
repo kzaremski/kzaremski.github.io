@@ -5,9 +5,12 @@ period: Oct 2023
 description: Over 30 hours, I and a team of 4 other people built a multi-university event aggregator website with Node.js and MongoDB.
 banner: /assets/img/hack23.png
 order: 1
+tags:
+  - Academic
+  - Full Stack
 ---
 
-<h1 class="px-4"><span class="h4 text-secondary"><a href="{{ '/projects/' | relative_url }}"><i class="fas fa-folder-open mr-2"></i>Projects/ </a></span>MSU-DU Joint Hackathon 2023 (uConnect)</h1>
+<h1 class=""><span class="h4 text-secondary"><a href="{{ '/projects/' | relative_url }}"><i class="fas fa-folder-open mr-2"></i>Projects/ </a></span>MSU-DU Joint Hackathon 2023 (uConnect)</h1>
 
 <div class="card bg-primary shadow-soft border-light mb-4">
   <div class="card-body">

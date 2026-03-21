@@ -5,9 +5,12 @@ period: Sep 2017
 description: I was contracted to animate the logo of a Denver based wedding stationery company and integrate it into their website cover page on Squarespace.
 banner: /assets/img/jolie.png
 order: 6
+tags:
+  - Creative
+  - Commercial
 ---
 
-<h1 class="px-4"><span class="h4 text-secondary"><a href="{{ '/projects/' | relative_url }}"><i class="fas fa-folder-open mr-2"></i>Projects/ </a></span>Jolie & Co. Animated Logo</h1>
+<h1 class=""><span class="h4 text-secondary"><a href="{{ '/projects/' | relative_url }}"><i class="fas fa-folder-open mr-2"></i>Projects/ </a></span>Jolie & Co. Animated Logo</h1>
 
 <div class="card bg-primary shadow-soft border-light mb-4">
   <div class="card-body">

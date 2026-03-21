@@ -60,6 +60,158 @@
 
 span.avoidwrap { display:inline-block; }
 
+#tag-filters button {
+  position: relative;
+  z-index: 0;
+  transition: none;
+}
+
+#tag-filters button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: -1;
+}
+
+#tag-filters button.shadow-inset {
+  box-shadow: none !important;
+}
+
+#tag-filters button.shadow-inset::after {
+  opacity: 1;
+}
+
+#tag-filters button.shadow-soft::after {
+  opacity: 0;
+}
+
+/* Mobile sidebar drawer */
+@media (max-width: 767.98px) {
+  .sidebar-col {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    max-width: 85vw;
+    z-index: 1050;
+    background: transparent;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding: 1rem;
+  }
+
+  .sidebar-col.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-col #stickysidebar {
+    position: static;
+    margin-top: 0;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .sidebar-toggle-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1040;
+    padding: 12px 0;
+  }
+
+  .sidebar-toggle {
+    height: 44px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 10px;
+    background: #e6e7ee;
+    box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #FFFFFF;
+    color: #44476A;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, box-shadow 0.2s ease;
+  }
+
+  .sidebar-toggle .sidebar-toggle-label {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .sidebar-toggle:active {
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF;
+  }
+
+  .sidebar-toggle.open {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .main-content {
+    padding-top: 0 !important;
+  }
+
+  .sidebar-close {
+    position: fixed;
+    top: 12px;
+    right: 15px;
+    z-index: 1060;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(180, 60, 60, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: none;
+  }
+
+  .sidebar-close.open {
+    display: flex;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1045;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .sidebar-overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.project-card {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.project-card:hover {
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #FFFFFF !important;
+  transform: translate(0, 2px);
+}
+
 
 .project-grid {
   display: grid;
