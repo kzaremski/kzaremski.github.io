@@ -4,6 +4,10 @@ description: "A step-by-step account of how I used strings, codesign, otool, and
 date: 2026-02-24
 ---
 
+<div class="alert alert-primary" role="alert">
+  <strong>Update (March 26, 2026):</strong> After communicating with the developer at 1dot.ai, they have added proper MIT license attribution for Apple Notes Exporter to Notes Exporter Pro. I consider this matter resolved.
+</div>
+
 I'm [Konstantin Zaremski](https://konstantin.zarem.ski), the author of [Apple Notes Exporter](https://github.com/kzaremski/apple-notes-exporter), a free and open-source macOS app for bulk exporting Apple Notes. I've been building and maintaining it since 2023, and in October 2025 I released version 1.0, a ground-up rewrite in Swift that directly queries the Apple Notes database for performance.
 
 In early 2026, a fan of my project reached out to let me know that someone was selling what appeared to be a repackaged version of my app under the name "Notes Exporter Pro" on [1dot.ai](https://1dot.ai/notes-exporter-macos). They'd slapped a $9.99 "Lifetime License" on it via PayPal, added a license key activation system, and were marketing it as their own product across at least six subreddits.
@@ -481,6 +485,12 @@ SHA256   149bada63a27a4ef1e1a1fefc6c0f219ff78f0157be947539d968cc11c636d88
 ## Update -- February 25, 2026
 
 I have been in contact with the developer at 1dot.ai. I sent a formal compliance notice requesting proper MIT attribution by March 26, 2026. I received a response the same day. The matter is ongoing.
+
+## Update -- March 26, 2026
+
+The developer at 1dot.ai has added proper MIT license attribution for Apple Notes Exporter to Notes Exporter Pro (v1.7, Build 3). The attribution is present in the app bundle and the in-app acknowledgments reference my name and copyright. This satisfies the requirements from my original compliance notice.
+
+I consider this matter resolved as long as the attribution remains in future releases. The technical analysis in this post remains unchanged, as every finding is accurate and independently reproducible.
 
 [src-parser]: https://github.com/kzaremski/apple-notes-exporter/blob/5453da07b5684178734dc12e2c7c0521253805c8/Apple%20Notes%20Exporter/Apple%20Notes%20Exporter/AppleNotesDatabaseParser.swift
 [src-table]: https://github.com/kzaremski/apple-notes-exporter/blob/5453da07b5684178734dc12e2c7c0521253805c8/Apple%20Notes%20Exporter/Apple%20Notes%20Exporter/TableParser.swift
