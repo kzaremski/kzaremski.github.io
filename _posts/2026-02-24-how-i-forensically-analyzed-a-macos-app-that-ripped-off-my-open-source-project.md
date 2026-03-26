@@ -2,9 +2,10 @@
 title: "How I Forensically Analyzed a macOS App That Ripped Off My Open-Source Project"
 description: "A step-by-step account of how I used strings, codesign, otool, and Ghidra to prove that a paid macOS app was built from my stolen open-source code -- and what I found."
 date: 2026-02-24
+excerpt: "I'm the author of Apple Notes Exporter, a free and open-source macOS app for bulk exporting Apple Notes. In early 2026, someone was selling a repackaged version of my app under the name 'Notes Exporter Pro' for $9.99, with every trace of my name and the MIT license stripped from the binary. Here's exactly how I confirmed it -- from basic string extraction all the way to Ghidra decompilation."
 ---
 
-<div class="alert alert-primary" role="alert">
+<div class="update-banner">
   <strong>Update (March 26, 2026):</strong> After communicating with the developer at 1dot.ai, they have added proper MIT license attribution for Apple Notes Exporter to Notes Exporter Pro. I consider this matter resolved.
 </div>
 
