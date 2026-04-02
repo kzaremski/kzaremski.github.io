@@ -50,6 +50,10 @@
 
   {% seo %}
 
+  {% if page.robots %}
+  <meta name="robots" content="{{ page.robots }}">
+  {% endif %}
+
   <!-- JSON-LD Structured Data for Personal Profile -->
   <script type="application/ld+json">
   {
