@@ -2,6 +2,7 @@
 layout: default
 title: Konstantin Zaremski
 description: Konstantin Zaremski is a software developer specializing in AI/ML and legal technology, based in Littleton, Colorado. Currently building intelligent systems at Tschetter Sulzer Muccio.
+last_modified_at: 2026-04-13
 ---
 
 # Konstantin Zaremski

@@ -2,6 +2,7 @@
 layout: default
 title: Contact
 description: Get in touch with Konstantin Zaremski via email, LinkedIn, GitHub, or Telegram.
+last_modified_at: 2026-04-13
 ---
 
 # Contact

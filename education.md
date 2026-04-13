@@ -2,6 +2,7 @@
 layout: default
 title: Education
 description: Konstantin Zaremski's educational background including a Bachelor of Science in Computer Science from Metropolitan State University of Denver.
+last_modified_at: 2026-04-13
 ---
 
 # Education
