@@ -36,15 +36,18 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/favicon-16x16.png' | relative_url }}">
 
-  <!-- Critical CSS -->
+  <!-- Google Fonts (loaded in parallel, not via bootstrap @import) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap"></noscript>
+
+  <!-- Critical CSS (render-blocking) -->
   <link rel="stylesheet" href="{{ '/assets/css/bootstrap.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
 
-  <!-- Font display swap for Font Awesome -->
-  <link rel="stylesheet" href="{{ '/assets/css/font-display-swap.css' | relative_url }}">
+  <!-- Non-critical CSS (deferred via media swap) -->
+  <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}"></noscript>
 
-  <!-- Non-critical CSS - Font Awesome -->
   <link rel="preload" href="{{ '/assets/css/fontawesome/fontawesome-free/css/all.min.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ '/assets/css/fontawesome/fontawesome-free/css/all.min.css' | relative_url }}"></noscript>
 
