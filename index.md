@@ -72,7 +72,6 @@ last_modified_at: 2026-04-13
       <span class="text-muted small"><i class="far fa-calendar mr-1"></i>{{ latest_post.date | date: "%B %d, %Y" }}</span>
     </p>
     <p class="card-text">{{ latest_post.excerpt | strip_html | truncate: 280 }}</p>
-    <a class="text-secondary" href="{{ latest_post.url | relative_url }}">Read the post &rarr;</a>
     {% endif %}
     <a class="text-secondary d-block mt-2" href="{{ '/blog/' | relative_url }}">See all posts &rarr;</a>
   </div>
