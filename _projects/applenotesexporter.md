@@ -2,6 +2,7 @@
 layout: project
 title: Apple Notes Exporter - Export Apple Notes in Bulk | macOS App
 period: Jun 2023 - Oct 2025
+last_modified_at: 2026-03-21
 description: Free macOS application for bulk exporting Apple Notes and iCloud Notes to HTML, PDF, Markdown, LaTeX, RTF, and TXT formats. Preserve folder hierarchies, formatting, and attachments. Download Apple Notes Exporter v1.0 for macOS Big Sur and later.
 banner: /assets/img/applenotesexporter-cropped.png
 order: 2

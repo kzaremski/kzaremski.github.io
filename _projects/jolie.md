@@ -2,6 +2,7 @@
 layout: project
 title: Jolie & Co. Animated Logo Cover Page
 period: Sep 2017
+last_modified_at: 2026-03-21
 description: I was contracted to animate the logo of a Denver based wedding stationery company and integrate it into their website cover page on Squarespace.
 banner: /assets/img/jolie.png
 order: 6

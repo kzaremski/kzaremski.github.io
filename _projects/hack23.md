@@ -2,6 +2,7 @@
 layout: project
 title: MSU-DU Joint Hackathon 2023 (uConnect)
 period: Oct 2023
+last_modified_at: 2026-03-21
 description: Over 30 hours, I and a team of 4 other people built a multi-university event aggregator website with Node.js and MongoDB.
 banner: /assets/img/hack23.png
 order: 1

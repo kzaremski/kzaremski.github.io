@@ -2,6 +2,7 @@
 layout: project
 title: David Clifton Ministries Food Pantry
 period: Jan 2021 - May 2021
+last_modified_at: 2026-03-21
 description: I was tasked with building a web-based internal application that would replace their aging MS Access solution used to manage food pantry clients, visits, inventory, etc.
 banner: /assets/img/dcm.png
 order: 5

@@ -2,6 +2,7 @@
 layout: project
 title: RockSat 2020
 period: May 2021
+last_modified_at: 2026-03-21
 description: The joint Arapahoe Community College and Red Rocks Community College RockSat 2020 team brought me on in early May to help with the final software integration for their RockSat 2020 mission payload.
 banner: /assets/img/rocksat.jpg
 order: 4

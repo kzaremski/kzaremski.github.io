@@ -59,6 +59,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "{{ site.url }}/#person",
     "name": "Konstantin Zaremski",
     "url": "{{ site.url }}",
     "image": "{{ site.url }}/assets/img/pfp.jpg",
@@ -79,14 +80,71 @@
     ],
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Denver",
-      "addressRegion": "Colorado"
+      "addressLocality": "Littleton",
+      "addressRegion": "Colorado",
+      "addressCountry": "US"
     },
     "email": "konstantin.zaremski@gmail.com",
+    "knowsAbout": [
+      "Software Development",
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Legal Technology",
+      "ASP.NET Core",
+      "Python",
+      "C#",
+      "Swift",
+      "Microsoft Azure",
+      "Kubernetes"
+    ],
     "sameAs": [
       "https://www.linkedin.com/in/konstantinzaremski",
       "https://github.com/kzaremski"
     ]
   }
   </script>
+
+  {% if page.url == '/' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "url": "{{ site.url }}/",
+    "mainEntity": { "@id": "{{ site.url }}/#person" },
+    {% if page.last_modified_at %}"dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",{% endif %}
+    "name": "{{ site.title }}",
+    "description": "{{ site.description | strip_newlines | strip }}"
+  }
+  </script>
+  {% endif %}
+
+  {% if page.layout == 'project' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+      { "@type": "ListItem", "position": 2, "name": "Projects", "item": "{{ site.url }}/projects/" },
+      { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ site.url }}{{ page.url }}" }
+    ]
+  }
+  </script>
+  {% endif %}
+
+  {% if page.layout == 'post' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ site.url }}/blog/" },
+      { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ site.url }}{{ page.url }}" }
+    ]
+  }
+  </script>
+  {% endif %}
+
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3faecc8e4b3248d5a5ce9bfb9b846c3f"}'></script><!-- End Cloudflare Web Analytics -->
 </head>

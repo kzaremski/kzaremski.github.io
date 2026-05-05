@@ -2,6 +2,7 @@
 layout: project
 title: Best Buy Computing Sale Tracker
 period: Jun 2021 - Aug 2021
+last_modified_at: 2026-03-21
 description: I built a web app for retail sales associates at my Best Buy location to independently report sales to Microsoft vendor provided labor.
 banner: /assets/img/bbytoolbox.png
 order: 3

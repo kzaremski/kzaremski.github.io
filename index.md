@@ -63,6 +63,23 @@ last_modified_at: 2026-04-13
 
 <div class="card bg-primary shadow-soft border-light mb-4">
   <div class="card-body">
+    <h4><i class="fas fa-pen-nib mr-2"></i>Recent Writing</h4>
+    {% assign latest_post = site.posts | first %}
+    {% if latest_post %}
+    <p class="card-text">
+      <strong><a class="text-secondary" href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a></strong>
+      <br />
+      <span class="text-muted small"><i class="far fa-calendar mr-1"></i>{{ latest_post.date | date: "%B %d, %Y" }}</span>
+    </p>
+    <p class="card-text">{{ latest_post.excerpt | strip_html | truncate: 280 }}</p>
+    <a class="text-secondary" href="{{ latest_post.url | relative_url }}">Read the post &rarr;</a>
+    {% endif %}
+    <a class="text-secondary d-block mt-2" href="{{ '/blog/' | relative_url }}">See all posts &rarr;</a>
+  </div>
+</div>
+
+<div class="card bg-primary shadow-soft border-light mb-4">
+  <div class="card-body">
     <h4><i class="fas fa-trophy mr-2"></i>Awards</h4>
     <ul class="card-text mb-0">
       <li><strong>First Place</strong> in the MSU Denver-DU Joint Hackathon 2023</li>
