@@ -1,0 +1,18 @@
+---
+layout: null
+sitemap: false
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+{% assign all_items = site.pages | concat: site.posts | concat: site.projects %}{% for item in all_items %}{% if item.sitemap == false %}{% continue %}{% endif %}{% assign url = item.url | replace: '/index.html', '/' %}{% unless url contains '/assets/' or url contains '.html' or url contains '.xml' or url contains '.txt' or url contains '.ico' or url contains '.css' or url contains '.js' or url == '/sitemap.xml' %}  <url>
+    <loc>{{ site.url }}{{ url }}</loc>
+{% if item.last_modified_at %}    <lastmod>{{ item.last_modified_at | date_to_xmlschema }}</lastmod>
+{% elsif item.date %}    <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
+{% endif %}{% assign img = item.banner | default: item.image %}{% if img %}    <image:image>
+      <image:loc>{{ site.url }}{{ img }}</image:loc>
+{% if item.title %}      <image:title>{{ item.title | xml_escape }}</image:title>
+{% endif %}    </image:image>
+{% endif %}  </url>
+{% endunless %}{% endfor %}</urlset>
