@@ -297,28 +297,3 @@ article .card-body table th {
   font-weight: 600;
 }
 
-/* Inline body links: secondary color + underline so they read as links.
-   Excludes nav items (.list-group-item), buttons, and elements that opt out
-   via .text-* color utilities or .text-muted. */
-.card-body a:not(.btn):not(.list-group-item):not(.text-muted):not([class*="text-"]) {
-  color: #2d4cc8;
-  text-decoration: underline;
-}
-.card-body a:not(.btn):not(.list-group-item):not(.text-muted):not([class*="text-"]):hover {
-  color: #1f348a;
-  text-decoration: none;
-}
-
-/* Linktree / nav anchors: nav-item appearance, no underline, visible hover. */
-a.list-group-item {
-  color: #31344b;
-  text-decoration: none;
-  transition: background-color 0.15s ease, color 0.15s ease;
-}
-a.list-group-item:hover,
-a.list-group-item:focus {
-  color: #2d4cc8;
-  text-decoration: none;
-  background-color: rgba(45, 76, 200, 0.06);
-}
-
