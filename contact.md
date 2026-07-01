@@ -26,17 +26,17 @@ last_modified_at: 2026-04-13
     </a>
   </div>
   <div class="col-md-6 mb-4">
-    <a target="_blank" rel="noopener noreferrer" href="https://x.com/konzski" class="btn btn-primary animate-down-2 d-block">
+    <a target="_blank" rel="me noopener noreferrer" href="https://x.com/konzski" class="btn btn-primary animate-down-2 d-block">
       <i class="fab fa-twitter mr-2"></i>X
     </a>
   </div>
   <div class="col-md-6 mb-4">
-    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/konstantinzaremski" class="btn btn-primary animate-down-2 d-block text-secondary">
+    <a target="_blank" rel="me noopener noreferrer" href="https://www.linkedin.com/in/konstantinzaremski" class="btn btn-primary animate-down-2 d-block text-secondary">
       <i class="fab fa-linkedin mr-2"></i>LinkedIn
     </a>
   </div>
   <div class="col-md-6 mb-4">
-    <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/kzaremski" class="btn btn-primary animate-down-2 d-block text-warning">
+    <a target="_blank" rel="me noopener noreferrer" href="https://github.com/kzaremski" class="btn btn-primary animate-down-2 d-block text-warning">
       <i class="fab fa-github mr-2"></i>GitHub
     </a>
   </div>
