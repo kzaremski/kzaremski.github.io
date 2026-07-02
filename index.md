@@ -31,7 +31,7 @@ last_modified_at: 2026-05-05
     <p class="card-text">
       My most popular open-source project: a free macOS app written in Swift that bulk exports Apple Notes to HTML, PDF, Markdown, LaTeX, RTF, and TXT while preserving folder hierarchies and formatting.
       It queries the local Notes database directly for performance and supports both iCloud and local accounts.
-      Currently at <strong>300+ stars on GitHub</strong>, Apple-notarized, and actively maintained.
+      Currently at <strong>600+ stars on GitHub</strong>, Apple-notarized, and actively maintained.
     </p>
     <a class="text-secondary" href="{{ '/projects/applenotesexporter/' | relative_url }}">Read more &rarr;</a>
   </div>

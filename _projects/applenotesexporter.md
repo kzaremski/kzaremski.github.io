@@ -35,7 +35,7 @@ keywords: apple notes exporter, export apple notes, apple notes backup, icloud n
       Built with Swift, the application directly queries the local Notes database for optimized performance, using approximately 200MB RAM regardless of library size.
       <br />
       <br />
-      This project has grown to over 140 stars on GitHub and is actively maintained with version 1.0 released in October 2025.
+      This project has grown to over 600 stars on GitHub and is actively maintained with version 1.0 released in October 2025.
       The application is notarized for macOS security compliance and supports macOS Big Sur 11.0 or later on both Intel and Apple Silicon processors.
     </p>
   </div>
