@@ -42,6 +42,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:name/
+  applets:
+    output: true
+    permalink: /applets/:name/
 
 # Defaults
 defaults:
@@ -57,6 +60,12 @@ defaults:
       type: "projects"
     values:
       layout: "project"
+      image: /assets/img/pfp.jpg
+  - scope:
+      path: ""
+      type: "applets"
+    values:
+      layout: "applet-app"
       image: /assets/img/pfp.jpg
   - scope:
       path: ""

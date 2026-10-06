@@ -55,6 +55,8 @@
 
   {% if page.robots %}
   <meta name="robots" content="{{ page.robots }}">
+  {% elsif page.unlisted %}
+  <meta name="robots" content="noindex, nofollow">
   {% endif %}
 
   <!-- JSON-LD Structured Data for Personal Profile -->

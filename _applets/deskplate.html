@@ -1,0 +1,168 @@
+---
+title: Desk Nameplate Generator
+exe: DESKPLATE.EXE
+icon: /applets/deskplate/icon.svg
+description: Generate a laser-cut triangular desk nameplate from three finger-jointed panels. Enter your name, title, size, and material thickness; download a layered SVG.
+window_width: 820
+window_height: 760
+last_modified_at: 2026-10-05
+---
+
+<div class="win95-tabs" role="tablist">
+  <button type="button" role="tab" aria-selected="true" data-panel="tab-3d">3D View</button>
+  <button type="button" role="tab" aria-selected="false" data-panel="tab-sheet">Cut Sheet</button>
+</div>
+<div class="win95-tabpanel">
+  <div id="tab-3d" role="tabpanel">
+    <div class="win95-sunken" id="viewport" style="height: 320px; background: #808080"></div>
+  </div>
+  <div id="tab-sheet" role="tabpanel" hidden>
+    <div class="win95-sunken" id="sheet" style="padding: 8px"></div>
+  </div>
+</div>
+<p id="info">Loading fonts...</p>
+<div class="win95-buttons" style="margin-bottom: 12px">
+  <button type="button" id="download" disabled>Download SVG</button>
+  <button type="button" id="reset" title="Clear saved settings">Reset</button>
+</div>
+
+<fieldset>
+  <legend>Text</legend>
+  <div class="win95-grid">
+    <div style="grid-column: 1 / -1">
+      <label for="title">Title (name)</label>
+      <input type="text" id="title" value="Konstantin Zaremski" maxlength="60">
+    </div>
+    <div style="grid-column: 1 / -1">
+      <label for="subtitle">Subtitle (optional)</label>
+      <input type="text" id="subtitle" value="Software Developer" maxlength="80">
+    </div>
+  </div>
+  <div class="win95-grid" style="margin-top: 8px">
+    <div>
+      <label for="titleFamily">Title font</label>
+      <select id="titleFamily" class="family"></select>
+    </div>
+    <div>
+      <label for="titleWeight">Weight</label>
+      <select id="titleWeight" class="weight"></select>
+    </div>
+    <div>
+      <label for="titleCase">Case</label>
+      <select id="titleCase">
+        <option value="none" selected>As typed</option>
+        <option value="upper">ALL CAPS</option>
+        <option value="smallcaps">Small Caps</option>
+      </select>
+    </div>
+    <div>
+      <label for="titleSize">Cap height <span class="parsed"></span></label>
+      <input type="text" id="titleSize" class="length" value="3/8in">
+    </div>
+    <div>
+      <label for="titleOffset">Vertical offset <span class="parsed"></span></label>
+      <input type="text" id="titleOffset" class="length signed" value="0mm" title="Positive moves down, negative moves up">
+    </div>
+    <div>
+      <label class="win95-option" style="margin-top: 18px"><input type="checkbox" id="titleItalic">Italic</label>
+    </div>
+  </div>
+  <div class="win95-grid" style="margin-top: 8px">
+    <div>
+      <label for="subtitleFamily">Subtitle font</label>
+      <select id="subtitleFamily" class="family"></select>
+    </div>
+    <div>
+      <label for="subtitleWeight">Weight</label>
+      <select id="subtitleWeight" class="weight"></select>
+    </div>
+    <div>
+      <label for="subtitleCase">Case</label>
+      <select id="subtitleCase">
+        <option value="none">As typed</option>
+        <option value="upper">ALL CAPS</option>
+        <option value="smallcaps" selected>Small Caps</option>
+      </select>
+    </div>
+    <div>
+      <label for="subtitleSize">Cap height <span class="parsed"></span></label>
+      <input type="text" id="subtitleSize" class="length" value="4.5mm">
+    </div>
+    <div>
+      <label for="subtitleOffset">Vertical offset <span class="parsed"></span></label>
+      <input type="text" id="subtitleOffset" class="length signed" value="0mm" title="Positive moves down, negative moves up">
+    </div>
+    <div>
+      <label class="win95-option" style="margin-top: 18px"><input type="checkbox" id="subtitleItalic">Italic</label>
+    </div>
+  </div>
+  <label class="win95-option" style="margin-top: 8px"><input type="checkbox" id="engraveBack">Engrave the back panel too (text rotated to read upright)</label>
+</fieldset>
+
+<fieldset>
+  <legend>Dimensions</legend>
+  <p>Lengths take <code>mm</code>, <code>cm</code>, or <code>in</code> / <code>"</code>, including fractions like <code>1/8in</code>. A bare number is read as inches. Vertical offsets can be negative: positive moves text down, negative moves it up.</p>
+  <div class="win95-grid">
+    <div>
+      <label for="faceWidth">Face width (X) <span class="parsed"></span></label>
+      <input type="text" id="faceWidth" class="length" value="2in">
+    </div>
+    <div>
+      <label for="length">Length (Y) <span class="parsed"></span></label>
+      <input type="text" id="length" class="length" value="10in">
+    </div>
+    <div>
+      <label for="thickness">Material thickness <span class="parsed"></span></label>
+      <input type="text" id="thickness" class="length" value="1/8in">
+    </div>
+    <div>
+      <label for="kerf">Kerf <span class="parsed"></span></label>
+      <input type="text" id="kerf" class="length" value="0.1mm">
+    </div>
+    <div>
+      <label for="fingerWidth">Finger width, approx. <span class="parsed"></span></label>
+      <input type="text" id="fingerWidth" class="length" value="1/2in">
+    </div>
+    <div>
+      <label for="margin">Text margin <span class="parsed"></span></label>
+      <input type="text" id="margin" class="length" value="4mm">
+    </div>
+    <div>
+      <label for="tips">Finger tips</label>
+      <select id="tips">
+        <option value="flush" selected>Flush</option>
+        <option value="full">Full (sand after)</option>
+      </select>
+    </div>
+  </div>
+</fieldset>
+
+<details class="win95-about">
+  <summary>About</summary>
+  <p>The nameplate is an equilateral triangular prism made of three identical panels joined by finger joints along their long edges. Each joint meets at 60&deg;, so the fingers are sized for square laser cuts: every slot is cut back &radic;3 &times; the material thickness from the outer edge.</p>
+  <p>The SVG is in millimeters with three layers, colored for LightBurn's default palette:</p>
+  <ul>
+  <li><strong>Cut</strong> (red, <code>#FF0000</code>): panel outlines as hairline paths.</li>
+  <li><strong>Name</strong> (black, <code>#000000</code>): your title text as filled outlines, for fill/raster engraving.</li>
+  <li><strong>Title</strong> (blue, <code>#0000FF</code>): your subtitle text as filled outlines.</li>
+  </ul>
+  <p><strong>Finger tips:</strong> <em>Flush</em> keeps every finger inside the outer surface, leaving a small notch at each corner finger. <em>Full</em> fills the corner completely, but each finger sticks out up to half the material thickness and needs sanding after gluing.</p>
+  <p>Lengths can be typed in <code>mm</code>, <code>cm</code>, or inches (<code>in</code> or <code>"</code>), including fractions such as <code>1/8in</code>; mix them freely. The 3D view shows the assembled nameplate at the dimensions you enter. Fonts include <a href="https://rsms.me/inter/" target="_blank" rel="noopener">Inter</a> by Rasmus Andersson (SIL Open Font License).</p>
+  <p>Engrave with the panels face-up; that face is the outside. Assemble with all engraved faces outward, and glue the joints. Measure your actual material thickness with calipers, as plywood sold as 1/8" is often closer to 3&nbsp;mm. The prism's ends are left open.</p>
+</details>
+
+<style>
+  #sheet svg { display: block; width: 100%; height: auto; background: #e3c08a; }
+  #sheet #layer-cut path { stroke-width: 1px; vector-effect: non-scaling-stroke; }
+  .win95 input.invalid { background: #ffd0d0; }
+  .win95 .parsed { color: #555; }
+  .win95 code { font-family: "Courier New", Courier, monospace; }
+</style>
+
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+} }
+</script>
+<script type="module" src="{{ '/applets/deskplate/app.js' | relative_url }}"></script>

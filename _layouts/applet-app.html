@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008080">
+  {% if page.unlisted %}<meta name="robots" content="noindex, nofollow">{% endif %}
+  {% if page.icon %}<link rel="icon" href="{{ page.icon | relative_url }}">{% endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/applets.css' | relative_url }}">
+  {% seo %}
+  <script>
+    if (window.self !== window.top) {
+      // Inside a window on the /applets/ desktop: that page provides the chrome and the analytics.
+      document.documentElement.classList.add('framed');
+    } else {
+      var beacon = document.createElement('script');
+      beacon.defer = true;
+      beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+      beacon.setAttribute('data-cf-beacon', '{"token": "3faecc8e4b3248d5a5ce9bfb9b846c3f"}');
+      document.head.appendChild(beacon);
+    }
+  </script>
+</head>
+<body class="win95 win95-app">
+  <div class="win95-window">
+    <div class="win95-titlebar win95-app-titlebar">
+      <span class="win95-title">{% if page.icon %}<img src="{{ page.icon | relative_url }}" alt="" width="16" height="16">{% endif %}{{ page.exe | default: page.title }}</span>
+      <span class="win95-controls"><a href="{{ '/applets/' | relative_url }}" title="Close (back to the Applets desktop)" aria-label="Close">&times;</a></span>
+    </div>
+    <div class="win95-body">
+      <h1 class="win95-hidden">{{ page.title }}</h1>
+      {{ content }}
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+---
+title: Video Converter
+exe: FFMPEG.EXE
+icon: /applets/ffmpeg/icon.svg
+description: Convert H.265/HEVC video to H.264 MP4, or swap AAC audio for PCM so DaVinci Resolve on Linux can play it. Runs ffmpeg in your browser; files never leave your machine.
+window_width: 720
+window_height: 640
+last_modified_at: 2026-10-05
+---
+
+<fieldset>
+  <legend>1. Job</legend>
+  <label class="win95-option"><input type="radio" name="job" value="h264" checked>H.265 &rarr; H.264 (MP4)</label>
+  <div class="win95-hint" id="h264-options">
+    <div class="win95-grid" style="margin-bottom: 8px">
+      <div>
+        <label for="crf">Quality</label>
+        <select id="crf">
+          <option value="18">High (CRF 18)</option>
+          <option value="20" selected>Good (CRF 20)</option>
+          <option value="23">Standard (CRF 23)</option>
+          <option value="28">Small file (CRF 28)</option>
+        </select>
+      </div>
+      <div>
+        <label for="preset">Speed</label>
+        <select id="preset">
+          <option value="ultrafast">Fastest</option>
+          <option value="veryfast" selected>Fast</option>
+          <option value="medium">Slow, smaller file</option>
+        </select>
+      </div>
+    </div>
+    <label class="win95-option"><input type="checkbox" id="h264-pcm">Also convert audio to PCM (outputs .mov for DaVinci Resolve)</label>
+  </div>
+
+  <label class="win95-option"><input type="radio" name="job" value="pcm">Replace AAC audio with PCM (MOV)</label>
+  <div class="win95-hint" id="pcm-options">
+    <p>Video is copied untouched, so this is fast. For DaVinci Resolve on Linux, which can't decode AAC.</p>
+    <label for="bits">Bit depth</label>
+    <select id="bits" style="max-width: 150px">
+      <option value="pcm_s16le" selected>16-bit</option>
+      <option value="pcm_s24le">24-bit</option>
+    </select>
+  </div>
+</fieldset>
+
+<fieldset>
+  <legend>2. Files</legend>
+  <div class="win95-sunken win95-drop" id="drop" tabindex="0" role="button">Drop video files here, or click to browse.</div>
+  <input type="file" id="picker" accept="video/*,.mp4,.mov,.mkv,.m4v" multiple hidden>
+  <ul class="win95-sunken win95-list" id="queue" style="margin-top: 8px"></ul>
+</fieldset>
+
+<div class="win95-buttons" style="margin-bottom: 8px">
+  <button type="button" id="convert" disabled>Convert</button>
+  <button type="button" id="cancel" disabled>Cancel</button>
+  <button type="button" id="clear">Clear</button>
+</div>
+
+<div class="win95-sunken win95-progress"><div id="bar"></div></div>
+<p id="status" style="margin-top: 4px">Ready.</p>
+
+<fieldset>
+  <legend>Log</legend>
+  <pre class="win95-log" id="log"></pre>
+</fieldset>
+
+<details class="win95-about">
+  <summary>About</summary>
+  <p>This is <a href="https://ffmpeg.org/" target="_blank" rel="noopener">ffmpeg</a> compiled to WebAssembly (<a href="https://github.com/ffmpegwasm/ffmpeg.wasm" target="_blank" rel="noopener">ffmpeg.wasm</a>), running in your browser. Nothing is uploaded. The first conversion downloads the ffmpeg core (about 32&nbsp;MB), which your browser then caches.</p>
+  <ul>
+  <li><strong>H.265 &rarr; H.264 (MP4):</strong> re-encodes HEVC video with x264 for players and editors that can't decode HEVC. Audio is copied as-is, or converted to PCM if you tick the box.</li>
+  <li><strong>AAC &rarr; PCM (MOV):</strong> leaves the video stream untouched and converts the audio to uncompressed PCM. DaVinci Resolve on Linux can't decode AAC, so clips from phones and cameras import with silent audio; this fixes that in seconds.</li>
+  </ul>
+  <p>Limits: browser ffmpeg runs on a single CPU core, so H.264 re-encoding is much slower than native ffmpeg. Very large files (over roughly 2&nbsp;GB of output) can exceed browser memory.</p>
+</details>
+
+<script type="module" src="{{ '/applets/ffmpeg/app.js' | relative_url }}"></script>

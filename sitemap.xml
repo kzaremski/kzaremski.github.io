@@ -6,7 +6,7 @@ permalink: /sitemap.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-{% assign all_items = site.pages | concat: site.posts | concat: site.projects %}{% for item in all_items %}{% if item.sitemap == false %}{% continue %}{% endif %}{% assign url = item.url | replace: '/index.html', '/' %}{% unless url contains '/assets/' or url contains '.html' or url contains '.xml' or url contains '.txt' or url contains '.ico' or url contains '.css' or url contains '.js' or url == '/sitemap.xml' %}  <url>
+{% assign all_items = site.pages | concat: site.posts | concat: site.projects | concat: site.applets %}{% for item in all_items %}{% if item.sitemap == false or item.unlisted %}{% continue %}{% endif %}{% assign url = item.url | replace: '/index.html', '/' %}{% unless url contains '/assets/' or url contains '.html' or url contains '.xml' or url contains '.txt' or url contains '.ico' or url contains '.css' or url contains '.js' or url == '/sitemap.xml' %}  <url>
     <loc>{{ site.url }}{{ url }}</loc>
 {% if item.last_modified_at %}    <lastmod>{{ item.last_modified_at | date_to_xmlschema }}</lastmod>
 {% elsif item.date %}    <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>

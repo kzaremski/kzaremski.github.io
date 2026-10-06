@@ -1,0 +1,111 @@
+---
+title: Nametag Generator
+exe: NAMETAG.EXE
+icon: /applets/nametag/icon.svg
+description: Design a 3D-printable nametag or keychain with raised text, an optional border and keyring hole, and download it as STL. Runs in your browser.
+window_width: 760
+window_height: 720
+last_modified_at: 2026-10-05
+---
+
+<div class="win95-sunken" id="viewport" style="height: 340px; margin-bottom: 4px; background: #808080"></div>
+<p id="info">Loading font...</p>
+
+<fieldset>
+  <legend>Text</legend>
+  <div class="win95-grid">
+    <div style="grid-column: 1 / -1">
+      <label for="line1">Line 1</label>
+      <input type="text" id="line1" value="KONSTANTIN" maxlength="40">
+    </div>
+    <div style="grid-column: 1 / -1">
+      <label for="line2">Line 2 (optional)</label>
+      <input type="text" id="line2" value="" maxlength="60">
+    </div>
+    <div>
+      <label for="font">Font</label>
+      <select id="font">
+        <option value="helvetiker_bold" selected>Helvetiker Bold</option>
+        <option value="helvetiker_regular">Helvetiker</option>
+        <option value="optimer_bold">Optimer Bold</option>
+        <option value="optimer_regular">Optimer</option>
+        <option value="gentilis_bold">Gentilis Bold</option>
+        <option value="gentilis_regular">Gentilis</option>
+        <option value="droid/droid_sans_bold">Droid Sans Bold</option>
+        <option value="droid/droid_serif_bold">Droid Serif Bold</option>
+        <option value="droid/droid_sans_mono_regular">Droid Sans Mono</option>
+      </select>
+    </div>
+    <div>
+      <label for="size1">Line 1 size (mm)</label>
+      <input type="number" id="size1" value="10" min="3" max="60" step="0.5">
+    </div>
+    <div>
+      <label for="size2">Line 2 size (mm)</label>
+      <input type="number" id="size2" value="5" min="2" max="40" step="0.5">
+    </div>
+    <div>
+      <label for="textHeight">Text height (mm)</label>
+      <input type="number" id="textHeight" value="1" min="0.2" max="10" step="0.2">
+    </div>
+  </div>
+</fieldset>
+
+<fieldset>
+  <legend>Plate</legend>
+  <div class="win95-grid">
+    <div>
+      <label for="base">Thickness (mm)</label>
+      <input type="number" id="base" value="2" min="0.6" max="10" step="0.2">
+    </div>
+    <div>
+      <label for="padding">Padding (mm)</label>
+      <input type="number" id="padding" value="4" min="0" max="30" step="0.5">
+    </div>
+    <div>
+      <label for="radius">Corner radius (mm)</label>
+      <input type="number" id="radius" value="3" min="0" max="30" step="0.5">
+    </div>
+    <div>
+      <label for="rim">Border width (mm, 0 = none)</label>
+      <input type="number" id="rim" value="1.2" min="0" max="10" step="0.2">
+    </div>
+    <div>
+      <label for="hole">Keyring hole</label>
+      <select id="hole">
+        <option value="none">None</option>
+        <option value="left" selected>Left</option>
+        <option value="top">Top</option>
+      </select>
+    </div>
+    <div>
+      <label for="holeDia">Hole diameter (mm)</label>
+      <input type="number" id="holeDia" value="5" min="2" max="20" step="0.5">
+    </div>
+    <div>
+      <label for="baseColor">Preview colors</label>
+      <input type="color" id="baseColor" value="#f4f4f4"> <input type="color" id="textColor" value="#c00000">
+    </div>
+  </div>
+</fieldset>
+
+<div class="win95-buttons">
+  <button type="button" id="dl-all">STL (all)</button>
+  <button type="button" id="dl-base">STL (base)</button>
+  <button type="button" id="dl-text">STL (text + border)</button>
+  <button type="button" id="reset" title="Clear saved settings">Reset</button>
+</div>
+
+<details class="win95-about">
+  <summary>About</summary>
+  <p>Dimensions are in millimeters. <strong>STL (all)</strong> is one file for single-color printing; for a raised text color change, either add a filament change at the layer where the text starts, or download <strong>Base</strong> and <strong>Text</strong> separately and load them as two parts of one object in your slicer (PrusaSlicer, OrcaSlicer, Bambu Studio) to assign each its own filament.</p>
+  <p>Fonts are the classic three.js typefaces and cover basic Latin characters only.</p>
+</details>
+
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"
+} }
+</script>
+<script type="module" src="{{ '/applets/nametag/app.js' | relative_url }}"></script>

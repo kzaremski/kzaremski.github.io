@@ -1,0 +1,73 @@
+---
+layout: null
+title: Tools & Applets
+description: Small browser-based tools by Konstantin Zaremski, on a retro desktop. Convert video with ffmpeg, generate 3D-printable nametags, and design laser-cut desk nameplates. Everything runs locally in your browser.
+last_modified_at: 2026-10-05
+---
+{% assign applets = site.applets | where_exp: "a", "a.unlisted != true" | sort: "title" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008080">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/favicon-16x16.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/applets.css' | relative_url }}">
+  {% seo %}
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3faecc8e4b3248d5a5ce9bfb9b846c3f"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body class="win95 wm">
+  <main class="wm-desktop" id="desktop">
+    <h1 class="wm-hidden">Tools &amp; Applets</h1>
+    <p class="wm-hidden">{{ page.description }}</p>
+    <ul class="wm-icons" id="icons">
+      {% for applet in applets %}
+      <li><a class="wm-icon" href="{{ applet.url | relative_url }}" data-applet="{{ applet.slug }}" title="{{ applet.description | escape }}">
+        <img src="{{ applet.icon | relative_url }}" alt="" width="32" height="32">
+        <span>{{ applet.exe | default: applet.title }}</span>
+      </a></li>
+      {% endfor %}
+      <li><a class="wm-icon" href="{{ '/' | relative_url }}" title="Back to konstantin.zarem.ski">
+        <img src="{{ '/applets/home.svg' | relative_url }}" alt="" width="32" height="32">
+        <span>HOME.LNK</span>
+      </a></li>
+    </ul>
+  </main>
+
+  <div id="windows"></div>
+
+  <div class="win95-window wm-menu" id="menu" role="menu" hidden>
+    <div class="wm-menu-banner" aria-hidden="true"><span><b>Applets</b>95</span></div>
+    <ul>
+      {% for applet in applets %}
+      <li><button type="button" role="menuitem" data-applet="{{ applet.slug }}"><img src="{{ applet.icon | relative_url }}" alt="" width="24" height="24">{{ applet.title }}</button></li>
+      {% endfor %}
+      <li class="wm-menu-sep" role="separator"></li>
+      <li><a role="menuitem" href="{{ '/' | relative_url }}"><img src="{{ '/applets/home.svg' | relative_url }}" alt="" width="24" height="24">konstantin.zarem.ski</a></li>
+      <li><button type="button" role="menuitem" id="shutdown"><img src="{{ '/applets/home.svg' | relative_url }}" alt="" width="24" height="24" style="filter: grayscale(1)">Shut Down...</button></li>
+    </ul>
+  </div>
+
+  <nav class="wm-taskbar" aria-label="Taskbar">
+    <button type="button" class="wm-start" id="start" aria-haspopup="menu" aria-expanded="false"><img src="{{ '/assets/img/favicon-16x16.png' | relative_url }}" alt="" width="16" height="16">Start</button>
+    <div class="wm-tasks" id="tasks"></div>
+    <div class="wm-tray" id="clock"></div>
+  </nav>
+
+  <script>
+    window.APPLETS = {
+      {% for applet in applets %}{{ applet.slug | jsonify }}: {
+        title: {{ applet.title | jsonify }},
+        exe: {{ applet.exe | default: applet.title | jsonify }},
+        icon: {{ applet.icon | relative_url | jsonify }},
+        app: {{ applet.url | relative_url | jsonify }},
+        width: {{ applet.window_width | default: 720 }},
+        height: {{ applet.window_height | default: 600 }}
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    };
+  </script>
+  <script src="{{ '/applets/desktop.js' | relative_url }}"></script>
+</body>
+</html>
